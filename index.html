@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnotex · Soluciones textiles para cada espacio</title>
+<meta name="description" content="Soluciones textiles de calidad para hoteles, alojamientos y hogares.">
+<link rel="canonical" href="https://magnotex.humads.workers.dev/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_EC">
+<meta property="og:title" content="Magnotex | Soluciones textiles para cada espacio">
+<meta property="og:description" content="Confort, calidad y excelentes acabados para hoteles, alojamientos y hogares.">
+<meta property="og:url" content="https://magnotex.humads.workers.dev/">
+<meta property="og:image" content="https://magnotex.humads.workers.dev/assets/magnotex_cama_1200x737.png">
+<meta property="og:image:alt" content="Productos Magnotex para el descanso">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Magnotex | Soluciones textiles para cada espacio">
+<meta name="twitter:description" content="Confort, calidad y excelentes acabados para hoteles, alojamientos y hogares.">
+<meta name="twitter:image" content="https://magnotex.humads.workers.dev/assets/magnotex_cama_1200x737.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<style>
+:root{
+  --suite:#15292E;        /* verde-pizarra profundo (superficie de marca) */
+  --suite-2:#1d3940;
+  --linen:#F5F1E9;        /* lino cálido (contenido) */
+  --cloud:#FCFBF8;        /* blanco hueso */
+  --brass:#B8915A;        /* latón (acento) */
+  --brass-d:#9c7740;
+  --sage:#8FA396;         /* salvia (frescura) */
+  --ink:#1c2b2e;
+  --muted:#4f5f60;
+  --soft-ink:#354648;
+  --line:#e3ddd0;
+  --line-strong:#d3cab9;
+  --line-dark:rgba(255,255,255,.14);
+  --maxw:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--linen);
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--brass);outline-offset:4px}
+section[id],footer[id]{scroll-margin-top:90px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.sec{padding:clamp(84px,9vw,132px) 0}
+h1,h2,h3{font-family:Georgia,serif;font-weight:400;line-height:1.08;
+  letter-spacing:-.015em;font-optical-sizing:auto}
+.eyebrow{font-family:Inter,system-ui,sans-serif;font-size:.74rem;font-weight:800;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--brass-d);display:inline-flex;align-items:center;gap:10px}
+
+.eyebrow.center{justify-content:center}
+.title{font-size:clamp(2rem,4.4vw,3.3rem);color:var(--suite)}
+.title em{font-style:italic;color:var(--brass-d)}
+.kicker{color:var(--muted);font-size:1.06rem;line-height:1.75;max-width:580px}
+
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:Inter,system-ui,sans-serif;font-weight:800;
+  font-size:.92rem;letter-spacing:.02em;padding:15px 30px;border-radius:2px;cursor:pointer;
+  border:1px solid transparent;transition:.28s ease}
+.btn-brass{background:var(--brass);color:#fff}
+.btn-brass:hover{background:var(--brass-d);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+.btn-ghost:hover{background:#fff;color:var(--suite);border-color:#fff}
+.btn-dark{background:var(--suite);color:#fff}
+.btn-dark:hover{background:var(--suite-2);transform:translateY(-2px)}
+
+/* ===================== HEADER ===================== */
+header{position:fixed;top:0;left:0;right:0;z-index:60;transition:.35s ease}
+.hbar{display:flex;align-items:center;justify-content:space-between;height:84px}
+.brand{position:relative;display:block;height:48px}
+.brand img{height:48px;width:auto;transition:opacity .3s}
+.brand .dark{position:absolute;top:0;left:0;opacity:0}
+header.scrolled{background:var(--cloud);box-shadow:0 1px 0 var(--line),0 10px 30px rgba(21,41,46,.06)}
+header.scrolled .hbar{height:70px}
+header.scrolled .brand,header.scrolled .brand img{height:42px}
+header.scrolled .brand .light{opacity:0}
+header.scrolled .brand .dark{opacity:1}
+.nav{display:flex;align-items:center;gap:30px;list-style:none}
+.nav>li{position:relative}
+.nav a{font-family:Inter,system-ui,sans-serif;font-weight:700;font-size:.92rem;color:#fff;padding:6px 0;
+  transition:color .2s}
+header.scrolled .nav a{color:var(--ink)}
+.nav a:hover{color:var(--brass)}
+header.scrolled .nav a:hover{color:var(--brass-d)}
+.has-sub>a::after{content:"";display:inline-block;width:5px;height:5px;margin-left:7px;
+  border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg) translateY(-2px)}
+.sub{position:absolute;top:140%;left:50%;transform:translateX(-50%) translateY(8px);
+  background:var(--cloud);border:1px solid var(--line);border-radius:6px;padding:10px;
+  min-width:240px;list-style:none;opacity:0;visibility:hidden;transition:.25s;
+  box-shadow:0 24px 50px rgba(21,41,46,.16);columns:1}
+.has-sub:hover .sub{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.sub a{display:block;padding:9px 14px;border-radius:4px;color:var(--ink)!important;font-weight:500;
+  font-size:.88rem}
+.sub a:hover{background:var(--linen);color:var(--brass-d)!important}
+.cta-pill{border:1px solid var(--brass);color:var(--brass)!important;padding:9px 20px!important;
+  border-radius:2px;font-weight:700!important}
+header.scrolled .cta-pill{color:var(--brass-d)!important}
+.cta-pill:hover{background:var(--brass);color:#fff!important}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;z-index:70}
+.burger span{width:26px;height:2px;background:#fff;transition:.3s}
+header.scrolled .burger span{background:var(--ink)}
+
+/* ===================== HERO ===================== */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;
+  padding:120px 0 80px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('assets/hero-magnotex.png') center/cover no-repeat;
+  transform:scale(1.08);animation:slowzoom 18s ease-in-out infinite alternate;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(105deg,rgba(14,33,38,.80) 0%,rgba(21,41,46,.62) 48%,rgba(21,41,46,.28) 100%)}
+@keyframes slowzoom{to{transform:scale(1)}}
+.hero-inner{max-width:760px}
+.hero .eyebrow{color:var(--brass)}
+.hero .eyebrow::before{background:var(--brass)}
+.hero h1{color:var(--cloud);font-size:clamp(2.6rem,6.2vw,5rem);margin:22px 0 6px;font-weight:300}
+.hero .promesa{font-family:Georgia,serif;font-style:italic;font-size:clamp(1.4rem,2.6vw,1.9rem);
+  color:#d4ad72;font-weight:400;display:block;margin-bottom:24px}
+.hero p{color:#eef3f0;font-size:1.1rem;line-height:1.75;max-width:580px;margin-bottom:36px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+/* ===================== INTRO + CIFRAS ===================== */
+.intro{background:var(--cloud)}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.intro h2{font-size:clamp(1.7rem,3.4vw,2.6rem);color:var(--suite)}
+.figs{display:flex;gap:0;border-top:1px solid var(--line);margin-top:8px}
+.fig{flex:1;padding:26px 18px 0}
+.fig:not(:last-child){border-right:1px solid var(--line)}
+.fig b{font-family:Georgia,serif;font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--brass-d);
+  font-weight:400;display:block;line-height:1}
+.fig small{font-size:.82rem;color:var(--muted);letter-spacing:.04em;display:block;margin-top:8px}
+
+/* ===================== MARQUEE (firma) ===================== */
+.trust{background:var(--cloud);padding-bottom:clamp(84px,9vw,120px)}
+.trust .lead{text-align:center;margin-bottom:42px}
+.marquee{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track{display:flex;align-items:center;gap:54px;width:max-content;animation:scroll 95s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.track img{height:50px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.55;transition:.3s}
+.track img:hover{filter:grayscale(0);opacity:1;transform:scale(1.05)}
+
+/* ===================== NOSOTROS ===================== */
+.about{background:var(--linen);padding:clamp(64px,6vw,96px) 0}
+.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(48px,6vw,78px);align-items:center}
+.about-img{position:relative}
+.about-img img{border-radius:4px;width:100%;height:auto}
+.about-img::after{content:"";position:absolute;inset:-16px -16px 16px 16px;border:1px solid var(--brass);
+  border-radius:4px;z-index:-1}
+.about h2{font-size:clamp(1.9rem,3.8vw,2.9rem);color:var(--suite);margin:20px 0 22px}
+.about p{color:var(--soft-ink);margin-bottom:18px;font-size:1.06rem;line-height:1.75}
+
+/* ===================== PRODUCTOS ===================== */
+.prod{background:var(--cloud)}
+.prod-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;
+  margin-bottom:50px;flex-wrap:wrap}
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.prod-action{display:flex;justify-content:center;margin-top:34px}
+.tile{position:relative;border-radius:4px;overflow:hidden;cursor:pointer;background:var(--linen)}
+.tile .img{aspect-ratio:4/5;overflow:hidden}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.tile:hover img{transform:scale(1.07)}
+.tile::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(transparent 34%,rgba(14,33,38,.9));opacity:.9;transition:.3s}
+.tile:hover::after{opacity:1}
+.tile .cap{position:absolute;left:20px;right:20px;bottom:18px;z-index:2;color:#fff}
+.tile .cap h3{font-size:1.18rem;font-weight:400}
+.tile .cap em{font-style:normal;font-family:Inter,system-ui,sans-serif;font-size:.74rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--brass);opacity:0;transform:translateY(8px);
+  display:inline-block;transition:.3s;margin-top:4px}
+.tile:hover .cap em{opacity:1;transform:none}
+
+/* ===================== PROCESO ===================== */
+.process{background:var(--cloud)}
+.process-intro{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,7vw,100px);align-items:end;margin-bottom:58px}
+.process-intro h2{margin-top:16px}
+.process-intro .kicker{justify-self:end;max-width:390px}
+.process-flow{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,3vw,46px);padding-top:8px}
+.process-flow::before{content:"";position:absolute;top:31px;left:0;right:0;height:1px;background:var(--line-strong)}
+.process-step{position:relative;min-height:180px;padding:0;border:0}
+.step-number{position:relative;z-index:1;display:grid;place-items:center;width:62px;height:62px;margin:0 0 25px;background:var(--cloud);border:1px solid var(--brass);border-radius:50%;font-family:Inter,system-ui,sans-serif;color:var(--brass-d);font-size:.72rem;font-weight:800;letter-spacing:.12em}
+.process-step h3{font-size:clamp(1.4rem,2.1vw,1.8rem);color:var(--suite);margin:0 0 8px}
+.process-step p{font-size:1rem;line-height:1.65;color:var(--muted);margin:0;max-width:25ch}
+
+/* ===================== VALOR ===================== */
+.value{background:var(--suite);color:#e7ede9}
+.value .title{color:#fff}
+.value .eyebrow{color:var(--brass)}.value .eyebrow::before{background:var(--brass)}
+.value-top{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,7vw,100px);align-items:end}
+.value-top .title{margin-top:16px}
+.value-lead{color:#c1ceca;font-size:1.1rem;line-height:1.75;max-width:520px}
+.value-ledger{margin-top:64px;border-bottom:1px solid var(--line-dark)}
+.value-line{display:grid;grid-template-columns:62px minmax(220px,1fr) minmax(280px,1.1fr);gap:26px;align-items:baseline;padding:28px 0;border-top:1px solid var(--line-dark)}
+.value-line .proof-number{color:var(--brass);font-size:.74rem;font-weight:800;letter-spacing:.16em}
+.value-line h3{font-size:clamp(1.35rem,2.2vw,1.8rem);color:#fff;font-weight:400;margin:0}
+.value-line p{font-size:.98rem;color:#b6c3bf;line-height:1.65;margin:0}
+/* ===================== SOLUCIONES ===================== */
+.solutions{background:var(--linen)}
+.solutions-intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,7vw,100px);align-items:end}
+.solutions-intro h2{margin:18px 0 0}
+.solutions-intro .kicker{max-width:540px}
+.solution-mosaic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:300px;gap:16px;margin-top:58px}
+.solution-tile{position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;overflow:hidden}
+.solution-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(145deg,rgba(14,33,38,.08),rgba(14,33,38,.48));pointer-events:none}
+.solution-tile > *{position:relative;z-index:1}
+.solution-tile .solution-label{font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:auto}
+.solution-tile h3{font-size:clamp(1.3rem,2vw,1.8rem);line-height:1.1;margin:0 0 9px;font-weight:400}
+.solution-tile p{font-size:.94rem;line-height:1.6;margin:0;max-width:34ch}
+.solution-tile--boutique{color:#fff;background:url("assets/solucion-boutique.png") center/cover}
+.solution-tile--hostales{color:#fff;background:url("assets/solucion-hostales.png") center/cover}
+.solution-tile--resorts{color:#fff;background:url("assets/solucion-resorts.png") center/cover}
+.solution-tile--apartamentos{color:#fff;background:url("assets/solucion-apartamentos.png") center/cover}
+
+
+/* ===================== MAPA ===================== */
+.map-sec{background:var(--cloud);padding:clamp(72px,7vw,104px) 0}
+.map-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:32px;align-items:center}
+.map-card{background:var(--cloud);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 18px 40px rgba(21,41,46,.08)}
+.map-frame{width:100%;height:340px;border:0;display:block}
+.map-copy p{color:var(--muted);margin-top:10px;font-size:1rem}
+.map-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+
+/* ===================== CTA ===================== */
+.cta{position:relative;color:#fff;text-align:center;overflow:hidden}
+.cta-bg{position:absolute;inset:0;z-index:-2;background:url('assets/producto-colchas.jpg') center/cover}
+.cta::after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(14,33,38,.9)}
+.cta h2{font-size:clamp(2rem,4.4vw,3.2rem);color:#fff;max-width:740px;margin:18px auto 0}
+.cta p{color:#eef3f0;margin:18px auto 34px;max-width:560px;font-size:1.08rem;line-height:1.75}
+.cta-phones{margin-top:26px;font-size:.95rem;color:#d9e2df}
+.cta-phones a{color:#fff;font-weight:700}
+
+/* ===================== FOOTER ===================== */
+footer{background:#0e2126;color:#9fb0ad;padding:78px 0 0}
+.foot{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:48px}
+.foot .flogo{height:56px;margin-bottom:20px}
+.foot p{font-size:.92rem;color:#8ea09c;line-height:1.75;max-width:330px}
+.foot h4{color:#fff;font-family:inherit;font-weight:700;font-size:1rem;margin-bottom:18px}
+.flist{list-style:none;columns:2;column-gap:18px}
+.flist li{margin-bottom:9px;font-size:.9rem}
+.flist a:hover{color:var(--brass)}
+.fc div{margin-bottom:15px}
+.fc span{display:block;color:var(--brass);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:4px}
+.fc a:hover,.fc .v{color:#dfe7e4}
+.pay{margin-top:6px}
+.pay img{height:34px;margin-top:10px;opacity:.9}
+.copy{border-top:1px solid var(--line-dark);margin-top:54px;padding:24px 0;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:#6f817d}
+.copy a{color:#9fb0ad}.copy a:hover{color:var(--brass)}
+
+/* ===================== FORMULARIO DE COTIZACIÓN ===================== */
+.quote-form{margin-top:56px;padding:32px 0;border-top:1px solid var(--line-dark);display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:start}
+.quote-form h2{font-size:clamp(1.6rem,2.6vw,2.1rem);color:#fff;margin:12px 0}.quote-form p{max-width:360px}
+.quote-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.quote-field{display:grid;gap:6px}.quote-field--full{grid-column:1/-1}
+.quote-field label{font-size:.73rem;color:var(--brass);font-weight:800;letter-spacing:.12em;text-transform:uppercase}.quote-field label span{text-transform:none;letter-spacing:0;font-weight:500;color:#aebcb8}
+.quote-field input,.quote-field textarea{width:100%;border:1px solid rgba(255,255,255,.22);border-radius:2px;background:rgba(255,255,255,.06);color:#fff;font:inherit;padding:11px 12px}.quote-field textarea{min-height:86px;resize:vertical}.quote-field input::placeholder,.quote-field textarea::placeholder{color:#aebcb8}
+.quote-fields .btn{justify-content:center;width:max-content}.quote-note{grid-column:1/-1!important;max-width:none!important;font-size:.8rem!important;color:#8ea09c!important}.quote-form + .copy{margin-top:36px}
+/* ===================== WHATSAPP ===================== */
+.wa{position:fixed;right:24px;bottom:24px;z-index:80;width:58px;height:58px;border-radius:50%;
+  background:#25d366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 30px rgba(37,211,102,.4);transition:.25s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:30px;height:30px;fill:#fff}
+
+/* ===================== REVEAL ===================== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ===================== RESPONSIVE ===================== */
+@media(max-width:980px){
+  .intro-grid,.about-grid{grid-template-columns:1fr;gap:42px}
+  .solutions-intro{grid-template-columns:1fr;gap:22px}
+  .about-img{order:-1;max-width:440px}
+  .prod-grid{grid-template-columns:repeat(2,1fr)}
+  .foot{grid-template-columns:1fr;gap:38px}
+}
+@media(max-width:780px){
+  .wrap{padding:0 22px}
+  .burger{display:flex}
+  .nav{position:fixed;inset:0 0 0 auto;width:min(320px,82vw);background:var(--cloud);
+    flex-direction:column;align-items:flex-start;gap:0;padding:100px 26px 40px;
+    transform:translateX(110%);transition:.35s ease;box-shadow:-20px 0 60px rgba(0,0,0,.2);overflow-y:auto}
+  .nav.open{transform:none}
+  .nav a{color:var(--ink)!important;width:100%;padding:14px 0;font-size:1rem}
+  .nav>li{width:100%;border-bottom:1px solid var(--line)}
+  .sub{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;
+    padding:8px 0 14px;min-width:0;display:none}
+  .has-sub.open .sub{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 12px}
+  .has-sub.open>a::after{transform:rotate(225deg) translate(-1px,-1px)}
+  .sub a{padding:8px 3px;font-size:.78rem;line-height:1.35}
+  .cta-pill{border:0!important;padding:14px 0!important}
+  .figs{flex-wrap:wrap}.fig{flex:1 1 40%;border-right:0!important;border-top:1px solid var(--line)}
+  .value-top{grid-template-columns:1fr;gap:22px}
+  .value-line{grid-template-columns:48px 1fr;gap:16px}
+  .value-line p{grid-column:2}
+  .process-intro{grid-template-columns:1fr;gap:22px;margin-bottom:42px}
+  .process-intro .kicker{justify-self:start}
+  .process-flow{grid-template-columns:1fr;gap:0;padding:0}
+  .process-flow::before{top:0;bottom:0;left:30px;right:auto;width:1px;height:auto}
+  .process-step{min-height:0;padding:0 0 36px 86px}
+  .process-step:last-child{padding-bottom:0}
+  .step-number{position:absolute;top:0;left:0;margin:0;width:62px;height:62px}
+}
+@media(max-width:680px){.solution-mosaic{grid-template-columns:1fr;grid-auto-rows:auto}.solution-tile,.solution-tile--boutique,.solution-tile--hostales,.solution-tile--resorts,.solution-tile--apartamentos{grid-column:1;grid-row:auto;min-height:260px}}
+@media(max-width:480px){.wrap{padding:0 18px}.sec{padding:72px 0}.about{padding:56px 0}.prod-grid{grid-template-columns:1fr}.solution-tile{padding:24px}.value-line{padding:22px 0}
+  .hero{padding:112px 0 76px}.hero h1{font-size:clamp(2.35rem,13vw,3.4rem)}
+  .hero-cta .btn,.map-links .btn,.prod-action .btn{width:100%;justify-content:center}}
+@media(max-width:780px){.quote-form{grid-template-columns:1fr;gap:28px}}
+@media(max-width:560px){.quote-fields{grid-template-columns:1fr}.quote-field--full{grid-column:auto}.quote-fields .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}.track{animation:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header id="header">
+  <div class="wrap hbar">
+    <a class="brand" href="#inicio">
+      <img class="light" id="logo-light" alt="Magnotex">
+      <img class="dark"  id="logo-dark"  alt="Magnotex">
+    </a>
+    <button class="burger" id="burger" type="button" aria-label="Menú" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <ul class="nav" id="nav">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li class="has-sub"><a href="#productos">Productos</a><ul class="sub" id="sub"></ul></li>
+      <li><a href="#clientes">Clientes</a></li>
+
+      <li><a href="catalogo_magnotex.html">Catálogo</a></li>
+      <li><a href="#contacto" class="cta-pill">Cotizar</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="eyebrow">Soluciones textiles</span>
+      <h1>Vestimos las camas<br>donde el Ecuador descansa.</h1>
+      <span class="promesa">Su satisfacción al dormir.</span>
+      <p>Magnotex ofrece soluciones textiles para hoteles, alojamientos y hogares, combinando confort, calidad y excelentes acabados.</p>
+      <div class="hero-cta">
+        <a href="#productos" class="btn btn-brass">Conoce nuestros productos</a>
+        <a href="#contacto" class="btn btn-ghost">Solicitar cotización</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INTRO + CIFRAS ===================== -->
+<section class="intro sec">
+  <div class="wrap intro-grid">
+    <div class="reveal">
+      <span class="eyebrow">Quiénes somos</span>
+      <h2 style="margin-top:18px">Hechos para el uso<br>de todos los días.</h2>
+    </div>
+    <div class="reveal">
+      <p class="kicker">Desde hace más de dos décadas desarrollamos soluciones textiles pensadas para acompañar el uso diario, con calidad que se siente en cada espacio.</p>
+      <div class="figs">
+        <div class="fig"><b id="years-experience">27</b><small>Años de trayectoria</small></div>
+        <div class="fig"><b>+900</b><small>Hoteles atendidos</small></div>
+        <div class="fig"><b>Nacional</b><small>Cobertura en todo el país</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MARQUEE (firma) ===================== -->
+<section class="trust" id="clientes">
+  <div class="wrap">
+    <div class="lead reveal">
+      <span class="eyebrow center">Clientes y hoteles que confían en nosotros</span>
+      <p class="kicker" style="margin:16px auto 0;max-width:720px">Hemos trabajado con más de 900 hoteles en todo el país durante nuestros <span id="years-experience-copy">27</span> años de trayectoria, respaldando la operación hotelera con productos de calidad.</p>
+    </div>
+  </div>
+  <div class="marquee"><div class="track" id="track"></div></div>
+</section>
+
+<!-- ===================== NOSOTROS ===================== -->
+<section class="about sec" id="nosotros">
+  <div class="wrap about-grid">
+    <div class="about-img reveal">
+      <img src="assets/magnotex_cama_1200x737.png" alt="Productos Magnotex para el descanso">
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Edredones Magnotex</span>
+      <h2>Calidad que se siente,<br>lavado tras lavado.</h2>
+      <p>Somos una empresa ecuatoriana dedicada a la producción y comercialización de soluciones textiles. Fabricamos edredones, colchas, duvets, fundas, sábanas, almohadas, protectores, toallas, salidas de baño, faldones y mantelería.</p>
+      <p>Cada pieza se elabora con procesos y materiales escogidos para acompañar el uso diario, sin perder la suavidad y la presentación que hacen especial a cada espacio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUCTOS ===================== -->
+<section class="prod sec" id="productos">
+  <div class="wrap">
+    <div class="prod-head">
+      <div class="reveal">
+        <span class="eyebrow">Catálogo</span>
+        <h2 class="title" style="margin-top:16px">Nuestra línea de productos</h2>
+      </div>
+      <p class="kicker reveal" style="max-width:340px">Productos para acompañar cada espacio, pensados para el uso diario.</p>
+    </div>
+    <div class="prod-grid reveal" id="prod-grid"></div>
+    <div class="prod-action reveal">
+      <a href="catalogo_magnotex.html" class="btn btn-dark">Ver cat&aacute;logo completo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOLUCIONES POR SEGMENTO ===================== -->
+<section class="solutions sec" id="soluciones">
+  <div class="wrap">
+    <div class="solutions-intro reveal">
+      <div>
+        <span class="eyebrow">Soluciones para hoteles</span>
+        <h2 class="title">Soluciones para distintos tipos de hoteles.</h2>
+      </div>
+      <p class="kicker">Te ayudamos a definir productos, cantidades y detalles para que cada pedido responda a la dinámica de tu operación.</p>
+    </div>
+    <div class="solution-mosaic reveal">
+      <article class="solution-tile solution-tile--boutique"><span class="solution-label">01 · Estilo</span><h3>Hoteles boutique</h3><p>Un look cuidado y piezas que acompañan espacios con personalidad.</p></article>
+      <article class="solution-tile solution-tile--hostales"><span class="solution-label">02 · Ritmo diario</span><h3>Hostales y negocios turísticos</h3><p>Productos resistentes y prácticos para un uso constante.</p></article>
+      <article class="solution-tile solution-tile--resorts"><span class="solution-label">03 · Escala</span><h3>Resorts y cadenas</h3><p>Volúmenes, consistencia y buena disponibilidad para operaciones grandes.</p></article>
+      <article class="solution-tile solution-tile--apartamentos"><span class="solution-label">04 · Confort</span><h3>Departamentos y apartamentos</h3><p>Opciones sencillas, confortables y fáciles de mantener.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESO ===================== -->
+<section class="process sec">
+  <div class="wrap">
+    <div class="process-intro reveal">
+      <div>
+        <span class="eyebrow">Proceso</span>
+        <h2 class="title">Cómo trabajamos</h2>
+      </div>
+      <p class="kicker">Un recorrido claro, desde la primera conversación hasta la entrega.</p>
+    </div>
+    <div class="process-flow reveal">
+      <article class="process-step"><span class="step-number">01</span><div><h3>Diagnóstico</h3><p>Revisión de habitaciones, uso y requerimientos.</p></div></article>
+      <article class="process-step"><span class="step-number">02</span><div><h3>Selección</h3><p>Productos, cantidades y detalles por habitación.</p></div></article>
+      <article class="process-step"><span class="step-number">03</span><div><h3>Cotización</h3><p>Precio claro, tiempos y condiciones comerciales.</p></div></article>
+      <article class="process-step"><span class="step-number">04</span><div><h3>Entrega</h3><p>Logística y acompañamiento postventa.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VALOR ===================== -->
+<section class="value sec">
+  <div class="wrap">
+    <div class="value-top reveal">
+      <div>
+        <span class="eyebrow">Por qué Magnotex</span>
+        <h2 class="title">Un proveedor, no solo un producto.</h2>
+      </div>
+      <p class="value-lead">Cada decisión, desde la tela hasta la entrega, está pensada para que el abastecimiento sea claro, consistente y fácil de gestionar.</p>
+    </div>
+    <div class="value-ledger reveal">
+      <article class="value-line"><span class="proof-number">01</span><h3>Fabricación especializada</h3><p>Producimos piezas pensadas para un uso intenso y para resistir lavados frecuentes.</p></article>
+      <article class="value-line"><span class="proof-number">02</span><h3>Calidad comprobada</h3><p>Buenas telas, buenos acabados y una presentación que se nota en cada espacio.</p></article>
+      <article class="value-line"><span class="proof-number">03</span><h3>Cobertura nacional</h3><p>Atendemos proyectos en todo el país con experiencia de muchos años.</p></article>
+      <article class="value-line"><span class="proof-number">04</span><h3>Asesoramiento cercano</h3><p>Le ayudamos a definir lo que mejor se ajusta a su operación.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MAPA ===================== -->
+<section class="map-sec sec" id="mapa">
+  <div class="wrap map-grid">
+    <div class="reveal map-copy">
+      <span class="eyebrow">Cómo llegar</span>
+      <h2 class="title" style="margin-top:14px">Visítanos</h2>
+      <p>Estamos ubicados en Calle Río Malacatos y Río Napo, a 7 cuadras de la estación de gasolina Petroecuador.</p>
+      <div class="map-links">
+        <a href="https://maps.app.goo.gl/pvoW9tLNVkgv7QCH9" target="_blank" rel="noopener" class="btn btn-dark">Abrir ruta en Google Maps</a>
+      </div>
+    </div>
+    <div class="reveal map-card">
+      <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=-0.3295495,-78.4959946&z=18&output=embed" allowfullscreen title="Mapa de Magnotex"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta sec" id="cta">
+  <div class="cta-bg"></div>
+  <div class="wrap">
+    <span class="eyebrow center" style="color:var(--brass)">Hablemos</span>
+    <h2>¿Listo para renovar sus espacios?</h2>
+    <p>Llámenos, escríbanos o visítenos. Le ayudamos a encontrar opciones de confort y diseño para cada espacio.</p>
+    <a href="#contacto" class="btn btn-brass">Contáctenos</a>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
+      <a href="https://wa.me/593991570939" target="_blank" rel="noopener" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)">WhatsApp</a>
+      <a href="https://www.instagram.com/magnotex/" target="_blank" rel="noopener" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)">Instagram</a>
+      <a href="https://www.facebook.com/www.edredonesmagnotex.ec" target="_blank" rel="noopener" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)">Facebook</a>
+    </div>
+    <div class="cta-phones">o llame ahora: <a id="cta-of" href="tel:023805794">(02) 3805 794</a></div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="contacto">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img class="flogo" id="logo-foot" alt="Magnotex">
+        <p id="foot-about"></p>
+        <div class="pay"><span style="color:var(--brass);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase">Aceptamos todas las tarjetas</span>
+          <img id="tarjetas" alt="Tarjetas de crédito y débito"></div>
+      </div>
+      <div>
+        <h4>Productos</h4>
+        <ul class="flist" id="foot-prod"></ul>
+      </div>
+      <div class="fc">
+        <h4>Contáctanos</h4>
+        <div><span>Oficina</span><a id="f-of" href="tel:023805794">(02) 3805 794</a></div>
+        <div><span>Celulares</span><span class="v" id="f-cel"></span></div>
+        <div><span>Correo</span><a id="f-mail" href="mailto:magnotex_ventas@hotmail.com">magnotex_ventas@hotmail.com</a></div>
+        <div><span>Dirección</span><span class="v" id="f-dir"></span></div>
+        <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:8px">
+          <a href="#mapa" class="btn btn-dark" style="padding:10px 14px;font-size:.82rem">Cómo llegar</a>
+        </div>
+      </div>
+    </div>
+    <div class="quote-form" aria-labelledby="quote-title">
+      <div>
+        <span class="eyebrow">Cotización</span>
+        <h2 id="quote-title">Cuéntanos qué necesitas.</h2>
+        <p>Completa estos datos y prepararemos tu mensaje para enviarlo por WhatsApp.</p>
+      </div>
+      <form class="quote-fields" id="quote-form">
+        <div class="quote-field"><label for="quote-name">Nombre</label><input id="quote-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="quote-field"><label for="quote-phone">Teléfono</label><input id="quote-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="quote-field quote-field--full"><label for="quote-company">Empresa o proyecto <span>(opcional)</span></label><input id="quote-company" name="company" type="text" autocomplete="organization"></div>
+        <div class="quote-field quote-field--full"><label for="quote-message">¿Qué productos buscas?</label><textarea id="quote-message" name="message" required></textarea></div>
+        <button class="btn btn-brass" type="submit">Enviar por WhatsApp</button>
+        <p class="quote-note">Al continuar se abrirá WhatsApp con la información de tu solicitud. El mensaje no se enviará hasta que lo confirmes allí.</p>
+      </form>
+    </div>    <div class="copy">
+      <span>© <span id="year"></span> Edredones Magnotex · Todos los derechos reservados.</span>
+      <a id="dev" href="https://www.humadigitalstudio.com/" target="_blank" rel="noopener"></a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" id="wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.042zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+</a>
+
+<script src="assets/productos-magnotex.js"></script>
+<script>
+/* =====================================================================
+   CONFIG: todos los datos editables del negocio en un solo lugar.
+   ===================================================================== */
+
+
+const ANIOS_TRAYECTORIA = new Date().getFullYear() - 2000 + 1;
+
+const CONFIG={
+  logoLight: "logotipo.png",  /* sobre fondos oscuros */
+  logoDark:  "logotipo.png",  /* sobre fondos claros  */
+  tarjetas:  "assets/tarjetas-de-credito.png",
+
+  aboutCorto:`Soluciones textiles con ${ANIOS_TRAYECTORIA} años de experiencia, calidad y fabricación especializada.`,
+
+  contacto:{
+    oficina:"(02) 3805 794", oficinaTel:"023805794",
+    celulares:[{texto:"099 1570 939",tel:"+593991570939"},{texto:"098 1098 185",tel:"+593981098185"}],
+    correo:"magnotex_ventas@hotmail.com",
+    direccion:"Calle Río Malacatos y Río Napo, a 7 cuadras de la estación de gasolina Petroecuador.",
+    whatsapp:"593991570939"
+  },
+  desarrolladoPor:"Desarrollado por HUMA Digital Studio",
+  clientes:["08/35","05/18","05/19","08/27","08/44","05/10","05/09","05/08","05/15","05/16",
+    "05/06","05/11","05/17","05/12","05/13","05/24","05/20","05/22","05/26","08/28","05/02",
+    "08/30","08/31","05/25","08/33","08/32","08/34","08/36","08/37","08/38","08/39","08/40",
+    "08/29","08/41","08/42","08/43","08/45","08/46","08/47","08/48","08/49","08/50","08/51",
+    "08/52","08/53","08/54","08/55","08/56","08/57","08/58","08/59","08/60","08/61","08/63",
+    "08/64","08/65","08/66","08/67","08/68","08/69","08/70","08/71","08/72","08/73"]
+};
+
+const $=s=>document.querySelector(s);
+$("#logo-light").src=CONFIG.logoLight;
+$("#logo-dark").src=CONFIG.logoDark;
+$("#logo-foot").src=CONFIG.logoLight;
+$("#tarjetas").src=CONFIG.tarjetas;
+$("#foot-about").textContent=CONFIG.aboutCorto;
+$("#year").textContent=new Date().getFullYear();
+$("#years-experience").textContent=ANIOS_TRAYECTORIA;
+$("#years-experience-copy").textContent=ANIOS_TRAYECTORIA;
+$("#dev").textContent=CONFIG.desarrolladoPor;
+
+const c=CONFIG.contacto;
+$("#f-of").textContent=c.oficina; $("#f-of").href="tel:"+c.oficinaTel;
+$("#cta-of").textContent=c.oficina; $("#cta-of").href="tel:"+c.oficinaTel;
+const cellularLinks=$("#f-cel"); c.celulares.forEach((celular,index)=>{if(index){cellularLinks.append(document.createTextNode(" · "));}const link=document.createElement("a");link.href="tel:"+celular.tel;link.textContent=celular.texto;cellularLinks.append(link);});
+$("#f-mail").textContent=c.correo; $("#f-mail").href="mailto:"+c.correo;
+$("#f-dir").textContent=c.direccion;
+$("#wa").href="https://wa.me/"+c.whatsapp+"?text="+encodeURIComponent("Hola, me interesan los productos de Magnotex.");
+const quoteForm=$("#quote-form");
+quoteForm.addEventListener("submit",event=>{event.preventDefault();const data=new FormData(quoteForm);const lines=[`Hola, soy ${data.get("name")}.`,`Teléfono: ${data.get("phone")}.`];if(data.get("company")){lines.push(`Empresa o proyecto: ${data.get("company")}.`);}lines.push(`Necesito: ${data.get("message")}`);window.open("https://wa.me/"+c.whatsapp+"?text="+encodeURIComponent(lines.join("\n")),"_blank","noopener");});
+
+/* productos */
+const grid=$("#prod-grid"),sub=$("#sub"),fprod=$("#foot-prod");
+const allProducts=MAGNOTEX_PRODUCTS.allProducts;
+const featuredProducts=MAGNOTEX_PRODUCTS.featuredProductNames
+  .map(name=>allProducts.find(product=>product.n===name))
+  .filter(Boolean);
+const catalogProducts=allProducts;
+
+featuredProducts.forEach(p=>{
+  const a=document.createElement("a"); a.className="tile"; a.href="#contacto";
+  a.innerHTML=`<div class="img"><img loading="lazy" src="${p.img}" alt="${p.n}"></div>
+    <div class="cap"><h3>${p.n}</h3><em>Consultar</em></div>`;
+  grid.appendChild(a);
+});
+catalogProducts.forEach(p=>{
+  sub.insertAdjacentHTML("beforeend",`<li><a href="catalogo_magnotex.html">${p.n}</a></li>`);
+  fprod.insertAdjacentHTML("beforeend",`<li><a href="catalogo_magnotex.html">${p.n}</a></li>`);
+});
+
+/* Marquee: logotipos duplicados para un desplazamiento continuo */
+const track=$("#track");
+const logoHTML=CONFIG.clientes.map(x=>{const[m,n]=x.split("/");
+  return `<img loading="lazy" src="assets/clientes/${m}/clientes-${n}.png" alt="Hotel cliente">`;}).join("");
+track.innerHTML=logoHTML+logoHTML;
+
+/* header scroll */
+const header=$("#header");
+addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>40));
+
+/* menú móvil */
+const burger=$("#burger"),nav=$("#nav"),productsToggle=document.querySelector(".has-sub>a");
+const setMenuOpen=open=>{
+  nav.classList.toggle("open",open);
+  burger.setAttribute("aria-expanded",String(open));
+};
+burger.addEventListener("click",()=>setMenuOpen(!nav.classList.contains("open")));
+productsToggle.addEventListener("click",e=>{
+  if(innerWidth<=780){e.preventDefault();e.currentTarget.closest(".has-sub").classList.toggle("open");}});
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
+  if(innerWidth>780) return;
+  const parentSub=a.closest(".has-sub");
+  if(parentSub && a.parentElement===parentSub) return;
+  setMenuOpen(false);
+}));
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

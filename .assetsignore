@@ -1,0 +1,6 @@
+﻿README.md
+*.py
+wrangler.jsonc
+.assetsignore
+.git
+.github
