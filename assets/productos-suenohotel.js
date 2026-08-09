@@ -1,4 +1,4 @@
-window.MAGNOTEX_PRODUCTS={
+window.SUENOHOTEL_PRODUCTS={
   allProducts:[
     {n:"Almohadas",img:"assets/producto-almohadas.png"},
     {n:"Colchas",img:"assets/producto-colchas.jpg"},
