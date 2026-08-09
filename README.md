@@ -7,9 +7,9 @@ Este repositorio contiene la web corporativa de SuenoHotel, desarrollada como un
 ## Contenido del proyecto
 
 - Página principal: [index.html](index.html)
-- Catálogo de productos: [catalogo_magnotex.html](catalogo_magnotex.html)
+- Catálogo de productos: [catalogo_suenohotel.html](catalogo_suenohotel.html)
 - Recursos visuales: [assets](assets)
-- Script de productos: [assets/productos-magnotex.js](assets/productos-magnotex.js)
+- Script de productos: [assets/productos-suenohotel.js](assets/productos-suenohotel.js)
 
 ## Objetivo
 
