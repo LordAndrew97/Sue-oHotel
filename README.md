@@ -33,4 +33,3 @@ https://github.com/LordAndrew97/SuenoHotel
 ## Estado
 
 Proyecto en desarrollo y mantenimiento con enfoque en presentación visual, usabilidad y experiencia del usuario.
-
