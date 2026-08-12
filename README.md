@@ -32,7 +32,7 @@ Presentar la marca de forma profesional, clara y atractiva, destacando:
 
 ## Vista previa local
 
-Puedes abrir los archivos HTML directamente en el navegador para ver la web localmente.
+Puedes abrir `index.html` directamente o utilizar la vista previa integrada de VS Code. Los enlaces internos apuntan a los archivos `.html` para ser compatibles con servidores locales simples; al publicar, Cloudflare los redirige a las URLs limpias sin extensión.
 
 ## Repositorio remoto
 

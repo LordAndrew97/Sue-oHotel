@@ -35,7 +35,7 @@
         <li class="has-sub"><a href="../catalogo_suenohotel.html">Productos</a><ul class="sub">{{HEADER_PRODUCTS}}</ul></li>
         <li><a href="../index.html#clientes">Clientes</a></li>
         <li><a href="../catalogo_suenohotel.html">Catálogo</a></li>
-        <li><a href="#contacto" class="cta-pill">Cotizar</a></li>
+        <li><a href="#cotizacion" class="cta-pill">Cotizar</a></li>
       </ul>
     </div>
   </header>
@@ -62,7 +62,7 @@
           <h2 class="visually-hidden" id="specs-title">Información de {{PRODUCT_NAME}}</h2>
           {{PRODUCT_CONTENT}}
           <div class="product-actions">
-            <a class="btn btn-brass" href="#contacto">Solicitar cotización</a>
+            <a class="btn btn-brass" href="#cotizacion">Solicitar cotización</a>
             <a class="back-link" href="../catalogo_suenohotel.html"><span aria-hidden="true">←</span> Volver al catálogo</a>
           </div>
         </article>
@@ -100,7 +100,7 @@
           <a href="../index.html#mapa" class="btn btn-dark compact">Cómo llegar</a>
         </div>
       </div>
-      <div class="quote-form" aria-labelledby="quote-title">
+      <div class="quote-form" id="cotizacion" aria-labelledby="quote-title">
         <div><span class="eyebrow">Cotización</span><h2 id="quote-title">Cuéntanos qué necesitas.</h2><p>Completa estos datos y prepararemos tu mensaje para enviarlo por WhatsApp.</p></div>
         <form class="quote-fields" id="quote-form">
           <div class="quote-field"><label for="quote-name">Nombre</label><input id="quote-name" name="name" type="text" autocomplete="name" required></div>

@@ -43,7 +43,7 @@ body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",san
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:3px solid var(--brass-d);outline-offset:4px}
-section[id],footer[id]{scroll-margin-top:90px}
+section[id],footer[id],#cotizacion{scroll-margin-top:90px}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
 .sec{padding:clamp(84px,9vw,132px) 0}
 .btn{box-shadow:0 12px 24px rgba(25,25,50,.08)}
@@ -106,19 +106,19 @@ header.scrolled .cta-pill{color:var(--brass-d)!important}
 header.scrolled .burger span{background:var(--ink)}
 
 /* ===================== HERO ===================== */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;
-  padding:120px 0 80px;overflow:hidden}
+.hero{position:relative;min-height:100vh;display:flex;align-items:stretch;
+  padding:104px 0 44px;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:url('assets/portada-hotel.jpg') center/cover no-repeat;
   transform:scale(1.08);animation:slowzoom 18s ease-in-out infinite alternate;z-index:-2}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;
   background:linear-gradient(105deg,rgba(16,16,42,.80) 0%,rgba(25,25,50,.62) 48%,rgba(25,25,50,.28) 100%)}
 @keyframes slowzoom{to{transform:scale(1)}}
-.hero-inner{max-width:760px}
+.hero>.wrap{width:100%;display:grid}
+.hero-inner{max-width:760px;display:flex;flex-direction:column;align-items:flex-start}
 .hero .eyebrow{color:var(--brass)}
 .hero .eyebrow::before{background:var(--brass)}
-.hero h1{color:var(--cloud);font-size:clamp(2.6rem,6.2vw,5rem);margin:22px 0 6px;font-weight:300}
 .hero .promesa{font-family:Georgia,serif;font-style:italic;font-size:clamp(1.4rem,2.6vw,1.9rem);
-  color:#4FE3E3;font-weight:400;display:block;margin-bottom:24px}
+  color:#4FE3E3;font-weight:400;display:block;margin:auto 0 24px}
 .hero p{color:#E8EDF7;font-size:1.1rem;line-height:1.75;max-width:580px;margin-bottom:36px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 /* ===================== INTRO + CIFRAS ===================== */
@@ -307,7 +307,7 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
 }
 @media(max-width:680px){.solution-mosaic{grid-template-columns:1fr;grid-auto-rows:auto}.solution-tile,.solution-tile--boutique,.solution-tile--hostales,.solution-tile--resorts,.solution-tile--apartamentos{grid-column:1;grid-row:auto;min-height:260px}}
 @media(max-width:480px){.wrap{padding:0 18px}.sec{padding:72px 0}.about{padding:56px 0}.prod-grid{grid-template-columns:1fr}.solution-tile{padding:24px}.value-line{padding:22px 0}
-  .hero{padding:112px 0 76px}.hero h1{font-size:clamp(2.35rem,13vw,3.4rem)}
+  .hero{padding:96px 0 30px}
   .hero-cta .btn,.map-links .btn,.prod-action .btn{width:100%;justify-content:center}}
 @media(max-width:780px){.quote-form{grid-template-columns:1fr;gap:28px}}
 @media(max-width:560px){.quote-fields{grid-template-columns:1fr}.quote-field--full{grid-column:auto}.quote-fields .btn{width:100%}}
@@ -334,7 +334,7 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
       <li><a href="#clientes">Clientes</a></li>
 
       <li><a href="catalogo_suenohotel.html">Catálogo</a></li>
-      <li><a href="#contacto" class="cta-pill">Cotizar</a></li>
+      <li><a href="#cotizacion" class="cta-pill">Cotizar</a></li>
     </ul>
   </div>
 </header>
@@ -345,12 +345,10 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
   <div class="wrap">
     <div class="hero-inner">
       <span class="eyebrow">Soluciones textiles</span>
-      <h1>Damos satisfacción y confort al mercado hotelero y hogar más exigente,<br>con altos estándares de calidad.</h1>
-      <span class="promesa">Su satisfacción al dormir.</span>
-      <p>Damos satisfacción  y confort al mercado hotelero y hogar más exigente, con altos estándares de calidad.</p>
+      <h1 class="promesa">Su satisfacción al dormir.</h1>
       <div class="hero-cta">
         <a href="#productos" class="btn btn-brass">Conoce nuestros productos</a>
-        <a href="#contacto" class="btn btn-ghost">Solicitar cotización</a>
+        <a href="#cotizacion" class="btn btn-ghost">Solicitar cotización</a>
       </div>
     </div>
   </div>
@@ -364,7 +362,7 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
       <h2 style="margin-top:18px">Hechos para el uso<br>de todos los días.</h2>
     </div>
     <div class="reveal">
-      <p class="kicker">Desde hace más de dos décadas desarrollamos soluciones textiles pensadas para acompañar el uso diario, con calidad que se siente en cada espacio.</p>
+      <p class="kicker">Desde hace más de 26 años desarrollamos soluciones textiles pensadas para acompañar el uso diario, con calidad que se siente en cada espacio.</p>
       <div class="figs">
         <div class="fig"><b id="years-experience">26</b><small>Años de trayectoria</small></div>
         <div class="fig"><b>+900</b><small>Hoteles atendidos</small></div>
@@ -394,7 +392,7 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
     <div class="reveal">
       <span class="eyebrow">SueñoHotel</span>
       <h2>Calidad que se siente,<br>lavado tras lavado.</h2>
-      <p>Somos una empresa dedicada a la fabricación de lencería hotelera y hogar, con una trayectoria de más de 26 años de experiencia.</p>
+      <p>Somos una empresa dedicada a la fabricación de lencería hotelera y hogar.</p>
       <p>Cada pieza se elabora con procesos y materiales escogidos para acompañar el uso diario, sin perder la suavidad y la presentación que hacen especial a cada espacio.</p>
     </div>
   </div>
@@ -498,7 +496,7 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
     <span class="eyebrow center" style="color:var(--brass)">Hablemos</span>
     <h2>¿Listo para renovar sus espacios?</h2>
     <p>Llámenos, escríbanos o visítenos. Le ayudamos a encontrar opciones de confort y diseño para cada espacio.</p>
-    <a href="#contacto" class="btn btn-brass">Contáctenos</a>
+    <a href="#cotizacion" class="btn btn-brass">Contáctenos</a>
     <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
       <a href="https://wa.me/593991570939" target="_blank" rel="noopener" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)">WhatsApp</a>
       <a href="https://www.instagram.com/magnotex/" target="_blank" rel="noopener" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)">Instagram</a>
@@ -533,7 +531,7 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
         </div>
       </div>
     </div>
-    <div class="quote-form" aria-labelledby="quote-title">
+    <div class="quote-form" id="cotizacion" aria-labelledby="quote-title">
       <div>
         <span class="eyebrow">Cotización</span>
         <h2 id="quote-title">Cuéntanos qué necesitas.</h2>

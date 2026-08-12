@@ -91,14 +91,14 @@ foreach ($product in $data.products) {
 
   $headerProducts = @($data.products | ForEach-Object {
     $current = if ($_.slug -eq $product.slug) { ' aria-current="page"' } else { '' }
-    '<li><a href="' + $_.slug + '"' + $current + '>' + (Encode-Html $_.name) + '</a></li>'
+    '<li><a href="' + $_.slug + '.html"' + $current + '>' + (Encode-Html $_.name) + '</a></li>'
   }) -join ''
-  $footerProducts = @($data.products | ForEach-Object { '<li><a href="' + $_.slug + '">' + (Encode-Html $_.name) + '</a></li>' }) -join ''
+  $footerProducts = @($data.products | ForEach-Object { '<li><a href="' + $_.slug + '.html">' + (Encode-Html $_.name) + '</a></li>' }) -join ''
   $productIndex = [Array]::IndexOf($slugs, $product.slug)
   $relatedIndexes = @(1,2,3 | ForEach-Object { ($productIndex + $_) % $data.products.Count })
   $relatedProducts = @($relatedIndexes | ForEach-Object {
     $related = $data.products[$_]
-    '<a class="related-card" href="' + $related.slug + '"><img loading="lazy" src="../' + $related.cardImage + '" alt=""><span>' + (Encode-Html $related.name) + '</span></a>'
+    '<a class="related-card" href="' + $related.slug + '.html"><img loading="lazy" src="../' + $related.cardImage + '" alt=""><span>' + (Encode-Html $related.name) + '</span></a>'
   }) -join ''
 
   $firstText = $null
@@ -137,7 +137,7 @@ foreach ($product in $data.products) {
   $generatedFiles.Add($outputPath)
 }
 
-$catalogProducts = @($data.products | ForEach-Object { [ordered]@{ n=$_.name; slug=$_.slug; img=$_.cardImage; href=("productos/" + $_.slug) } })
+$catalogProducts = @($data.products | ForEach-Object { [ordered]@{ n=$_.name; slug=$_.slug; img=$_.cardImage; href=("productos/" + $_.slug + ".html") } })
 $catalogObject = [ordered]@{ allProducts=$catalogProducts; featuredSlugs=@($data.featuredSlugs) }
 $catalogJson = $catalogObject | ConvertTo-Json -Depth 8 -Compress
 [System.IO.File]::WriteAllText($catalogDataPath,"window.SUENOHOTEL_PRODUCTS=$catalogJson;`n",$utf8NoBom)
