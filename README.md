@@ -8,8 +8,18 @@ Este repositorio contiene la web corporativa de SuenoHotel, desarrollada como un
 
 - Página principal: [index.html](index.html)
 - Catálogo de productos: [catalogo_suenohotel.html](catalogo_suenohotel.html)
+- Páginas individuales: [productos](productos)
+- Datos centralizados: [content/productos.json](content/productos.json)
 - Recursos visuales: [assets](assets)
 - Script de productos: [assets/productos-suenohotel.js](assets/productos-suenohotel.js)
+
+## Actualizar las fichas de producto
+
+1. Edita `content/productos.json`.
+2. Si cambian las imágenes de la fuente, ejecuta `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\sync-product-images.ps1 -Force`.
+3. Regenera las páginas con `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\build-product-pages.ps1`.
+
+El generador crea una página estática por producto en `productos/` y actualiza los enlaces centralizados del catálogo. Las URLs públicas se sirven sin extensión, por ejemplo `/productos/almohadas`.
 
 ## Objetivo
 

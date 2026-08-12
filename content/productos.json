@@ -1,0 +1,540 @@
+{
+  "featuredSlugs": [
+    "salidas-de-bano",
+    "sabanas",
+    "toallas",
+    "almohadas"
+  ],
+  "products": [
+    {
+      "slug": "almohadas",
+      "name": "Almohadas",
+      "sourceUrl": "https://sabanasecuador.com/productos/almohadas/",
+      "cardImage": "assets/producto-almohadas.png",
+      "blocks": [
+        {
+          "type": "section",
+          "heading": "Almohadas de plumón suave:",
+          "paragraphs": [
+            "Tela bramante 144 hilos 50% poliéster y 50% algodón rellena de plumón especial sintético siliconado.",
+            "Tela microfibra 100% poliéster rellena de plumón sintético especial siliconado."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Medidas:",
+          "items": ["50 x 50", "70 x 50", "90 x 50", "70 x 70"]
+        },
+        {
+          "type": "section",
+          "heading": "Almohadas de plumón semidura:",
+          "paragraphs": [
+            "Tela bramante 144 hilos 50% poliéster y 50% algodón rellena de plumón especial sintético siliconado y forrada con un plumón en plancha.",
+            "Tela microfibra 100% poliéster rellena de plumón sintético especial siliconado forrada con un plumón en plancha."
+          ]
+        },
+        {
+          "type": "note",
+          "text": "NOS AJUSTAMOS A LAS MEDIDAS SOLICITADAS POR CLIENTE."
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/almohadas-01.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/almohadas-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/almohadas-03.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/almohadas-04.jpg"
+      ]
+    },
+    {
+      "slug": "colchas",
+      "name": "Colchas",
+      "sourceUrl": "https://sabanasecuador.com/productos/colchas/",
+      "cardImage": "assets/producto-colchas.jpg",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tela microfibra 100% poliéster acolchado ST- 1"
+        },
+        {
+          "type": "list",
+          "heading": "Disponible:",
+          "items": ["Blanco y colores"]
+        },
+        {
+          "type": "list",
+          "heading": "Diseños:",
+          "items": ["Flores", "Cuadros", "Lazos"]
+        },
+        {
+          "type": "table",
+          "heading": "Medidas:",
+          "headers": ["Plaza", "Ancho", "Largo"],
+          "rows": [
+            ["1 PL", "1,70", "2,25"],
+            ["1 ½ PL", "1,85", "2,25"],
+            ["2 PL", "2,15", "2,25"],
+            ["2 ½ PL", "2,40", "2,25"],
+            ["3 PL", "2,80", "2,25"]
+          ]
+        },
+        {
+          "type": "note",
+          "text": "* Nos ajustamos a sus medidas."
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/colchas-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/colchas-11.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/colchas-01.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/colchas-03.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/colchas-04.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/colchas-05.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/colchas-06.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/colchas-07.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/colchas-08.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/colchas-09.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/colchas-10.jpg"
+      ]
+    },
+    {
+      "slug": "duvet",
+      "name": "Duvet",
+      "sourceUrl": "https://sabanasecuador.com/productos/duvet/",
+      "cardImage": "assets/producto-duvet.jpg",
+      "blocks": [
+        {
+          "type": "list",
+          "heading": "Elaborados con:",
+          "items": [
+            "Tela Bramante 144 hilos 50% algodón y 50% poliéster",
+            "Tela microfibra 100% poliéster",
+            "Plumón sintético siliconado hipoalergénico"
+          ]
+        },
+        {
+          "type": "table",
+          "heading": "Medidas:",
+          "headers": ["Plaza", "Ancho", "Largo"],
+          "rows": [
+            ["1 PL", "1,50", "2,15"],
+            ["1 ½ PL", "1,65", "2,15"],
+            ["2 PL", "1,95", "2,15"],
+            ["2 ½ PL", "2,20", "2,15"],
+            ["3 PL", "2,60", "2,15"],
+            ["3 ¼ PL", "2,70", "2,15"]
+          ]
+        },
+        {
+          "type": "note",
+          "text": "* Nos ajustamos a sus medidas."
+        },
+        {
+          "type": "list",
+          "heading": "Espesor según el clima en el que se va a usar:",
+          "items": [
+            "ST-2 (Plancha de plumón de 2cm) Clima cálido",
+            "ST-4 (Plancha de plumón de 4cm) Clima frío"
+          ]
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/duvet-01.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/duvet-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/duvet-03.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/duvet-04.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/duvet-05.jpg"
+      ]
+    },
+    {
+      "slug": "fundas-de-duvet",
+      "name": "Fundas de duvet",
+      "sourceUrl": "https://sabanasecuador.com/productos/fundas-de-duvet/",
+      "cardImage": "assets/producto-fundas-duvet.jpg",
+      "blocks": [
+        {
+          "type": "list",
+          "heading": "Funda tipo sobre o con cierre elaborados con telas:",
+          "items": ["Bramante", "Percal", "Satín"]
+        },
+        {
+          "type": "paragraph",
+          "text": "En 144, 220 y 300 hilos"
+        },
+        {
+          "type": "table",
+          "heading": "Medidas:",
+          "headers": ["Plaza", "Ancho", "Largo"],
+          "rows": [
+            ["1 PL", "1,50", "2,15"],
+            ["1 ½ PL", "1,65", "2,15"],
+            ["2 PL", "1,95", "2,15"],
+            ["2 ½ PL", "2,20", "2,15"],
+            ["3 PL", "2,60", "2,15"],
+            ["3 ¼ PL", "2,70", "2,15"]
+          ]
+        },
+        {
+          "type": "note",
+          "text": "* Nos ajustamos a sus medidas."
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-01.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-03.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-04.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-05.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-06.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-07.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-08.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-09.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-10.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-11.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-12.jpg"
+      ]
+    },
+    {
+      "slug": "edredones",
+      "name": "Edredones",
+      "sourceUrl": "https://sabanasecuador.com/productos/edredones/",
+      "cardImage": "assets/producto-edredones.jpg",
+      "blocks": [
+        {
+          "type": "section",
+          "heading": "Edredón Primor acolchado ST-2",
+          "items": [
+            "Confeccionado en tela bramante 144 hilos 50% algodón y 50% poliéster o en tela microfibra 100% poliéster.",
+            "Disponible en colores estampados o llanos."
+          ]
+        },
+        {
+          "type": "section",
+          "heading": "Edredón Sensación acolchado ST-4",
+          "items": [
+            "Confeccionado en tela bramante 144 hilos 50% algodón y 50% poliéster o en tela microfibra 100% poliéster.",
+            "Disponible en colores estampados o llanos."
+          ]
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/edredones-01.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/edredones-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/edredones-03.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/edredones-04.jpg"
+      ]
+    },
+    {
+      "slug": "protector-de-colchon",
+      "name": "Protector de colchón",
+      "sourceUrl": "https://sabanasecuador.com/productos/protector-de-colchon/",
+      "cardImage": "assets/producto-protector-colchon.jpg",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Protector ultrasonido 100% impermeable anti fluidos – anti ácaros."
+        },
+        {
+          "type": "paragraph",
+          "text": "Disponible en color blanco."
+        },
+        {
+          "type": "paragraph",
+          "text": "Protector de colchón acolchado ST–1 disponible en tela bramante 144 hilos o tela microfibra 100% poliéster."
+        },
+        {
+          "type": "table",
+          "heading": "Medidas:",
+          "headers": ["Plaza", "Ancho", "Largo"],
+          "rows": [
+            ["1 PL", "0,85", "1,95"],
+            ["1 ¼ PL", "0,95", "1,95"],
+            ["1 ½ PL", "1,10", "1,95"],
+            ["2 PL", "1,40", "1,95"],
+            ["2 ½ PL", "1,65", "1,95"],
+            ["3 PL", "2,05", "2,05"],
+            ["3 ¼ PL", "2,15", "1,95"]
+          ]
+        },
+        {
+          "type": "note",
+          "text": "* Nos ajustamos a sus medidas."
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-duvet-01.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-duvet-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-duvet-03.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-duvet-04.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-duvet-05.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-duvet-06.jpg"
+      ]
+    },
+    {
+      "slug": "protector-de-almohada",
+      "name": "Protector de almohada",
+      "sourceUrl": "https://sabanasecuador.com/productos/protector-de-almohada/",
+      "cardImage": "assets/producto-protector-almohada.jpg",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Protector acolchado ultrasonido 100% impermeable anti fluidos – anti ácaros"
+        },
+        {
+          "type": "paragraph",
+          "text": "Disponible en color blanco."
+        },
+        {
+          "type": "paragraph",
+          "text": "Protector de almohada acolchado ST–1 disponible en tela bramante 144 hilos o tela microfibra 100% poliéster."
+        },
+        {
+          "type": "table",
+          "heading": "Medidas:",
+          "headers": ["Ancho", "Largo"],
+          "rows": [
+            ["0,50", "0,50"],
+            ["0,70", "0,50"],
+            ["0,90", "0,50"]
+          ]
+        },
+        {
+          "type": "note",
+          "text": "* Nos ajustamos a sus medidas."
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-almohada-01.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-almohada-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-almohada-03.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-almohada-04.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-almohada-05.jpg"
+      ]
+    },
+    {
+      "slug": "toallas",
+      "name": "Toallas",
+      "sourceUrl": "https://sabanasecuador.com/productos/toallas/",
+      "cardImage": "assets/producto-toallas.png",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elaboradas en 100% algodón con hidro filling extra absorbente en 450 y 550gr."
+        },
+        {
+          "type": "table",
+          "headers": ["Tipo", "Ancho", "Largo"],
+          "rows": [
+            ["Toalla Facial", "0,33", "0,33"],
+            ["Toalla Chica de Mano", "0,65", "0,45"],
+            ["Toalla Mediana", "1,00", "0,50"],
+            ["Toalla De Baño", "1,40", "1,70"],
+            ["Toalla Playera (370gr.)", "1,60", "0,90"]
+          ]
+        },
+        {
+          "type": "note",
+          "text": "* Nos ajustamos a sus medidas."
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/toallas-01.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/toallas-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/toallas-03.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/toallas-05.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/toallas-04.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/toallas-06.jpg"
+      ]
+    },
+    {
+      "slug": "sabanas",
+      "name": "Sábanas",
+      "sourceUrl": "https://sabanasecuador.com/productos/sabanas/",
+      "cardImage": "assets/producto-sabanas.png",
+      "blocks": [
+        {
+          "type": "list",
+          "heading": "Elaboradas con telas:",
+          "items": [
+            "Bramante 144 hilos poly-algodón 50% algodón y 50% poliéster.",
+            "Percal 220 hilos 50% algodón y 50% poliéster.",
+            "Percal 300 hilos 60% algodón 40% poliéster.",
+            "Satín 300 hilos 60% algodón 40% poliéster."
+          ]
+        },
+        {
+          "type": "table",
+          "heading": "Medidas:",
+          "headers": ["Plaza", "Ancho", "Largo"],
+          "rows": [
+            ["1 PL", "1,50", "2,40"],
+            ["1 ½ PL", "1,65", "2,40"],
+            ["2 PL", "1,95", "2,40"],
+            ["2 ½ PL", "2,20", "2,60"],
+            ["3 PL", "2,60", "2,60"],
+            ["3 ¼ PL", "2,70", "2,60"]
+          ]
+        },
+        {
+          "type": "note",
+          "text": "* Nos ajustamos a sus medidas."
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/sabanas-05.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/sabanas-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/sabanas-03.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/sabanas-04.jpg"
+      ]
+    },
+    {
+      "slug": "salidas-de-bano",
+      "name": "Salidas de baño",
+      "sourceUrl": "https://sabanasecuador.com/productos/salidas-de-bano/",
+      "cardImage": "assets/producto-salidas-bano.png",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tela toalla 100% algodón extra absorbentes 400 gramos*m2."
+        },
+        {
+          "type": "paragraph",
+          "text": "Disponible en blanco"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tela galleta o nido de abeja 50% algodón y 50% poliéster."
+        },
+        {
+          "type": "paragraph",
+          "text": "Disponible en color blanco – habano"
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/salidas-de-bano-01.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/salidas-de-bano-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/salidas-de-bano-03.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/salidas-de-bano-04.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/salidas-de-bano-05.jpg"
+      ]
+    },
+    {
+      "slug": "faldones",
+      "name": "Faldones",
+      "sourceUrl": "https://sabanasecuador.com/productos/faldones/",
+      "cardImage": "assets/producto-faldones.jpg",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Tela bramante 144 hilos 50% algodón y 50% poliéster.",
+            "Tela castilla 100% poliéster.",
+            "Disponible en blanco y colores varios."
+          ]
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/faldones-04.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/faldones-01.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/faldones-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/faldones-03.jpg"
+      ]
+    },
+    {
+      "slug": "cobija-termica",
+      "name": "Cobija térmica",
+      "sourceUrl": "https://sabanasecuador.com/productos/cobija-termica/",
+      "cardImage": "assets/producto-cobija-termica.png",
+      "blocks": [
+        {
+          "type": "section",
+          "heading": "Cobija térmica polar martillada 100% poliéster.",
+          "items": [
+            "Medida única de 2,00 x 2,20",
+            "Disponibles en varios colores."
+          ]
+        },
+        {
+          "type": "section",
+          "heading": "Cobija Dolly ovejera 100% poliéster.",
+          "items": ["Disponibles en varios colores."]
+        },
+        {
+          "type": "table",
+          "heading": "Medidas:",
+          "headers": ["Plaza", "Ancho", "Largo"],
+          "rows": [
+            ["1 ½ PL", "1,65", "2,20"],
+            ["2 PL", "2,00", "2,20"],
+            ["2 ½ PL", "2,20", "2,20"],
+            ["3 PL", "2,60", "2,20"]
+          ]
+        },
+        {
+          "type": "note",
+          "text": "* Nos ajustamos a sus medidas."
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/cobijas-termicas-06.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/cobijas-termicas-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/cobijas-termicas-03.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/cobijas-termicas-04.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/cobijas-termicas-05.jpg"
+      ]
+    },
+    {
+      "slug": "manteleria",
+      "name": "Mantelería",
+      "sourceUrl": "https://sabanasecuador.com/productos/manteleria/",
+      "cardImage": "assets/producto-manteleria.jpg",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Diversidad de telas en cuanto a colores, diseños, texturas y tamaños.",
+            "Manteles, servilletas, lazos y forros para sillas."
+          ]
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/manteleria-01.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/manteleria-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/manteleria-03.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/manteleria-04.jpg"
+      ]
+    },
+    {
+      "slug": "alfombras-de-bano",
+      "name": "Alfombras de baño",
+      "sourceUrl": "https://sabanasecuador.com/productos/alfombras-de-bano/",
+      "cardImage": "assets/producto-alfombra-bano.png",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tela toalla 100% algodón, 800gr. x m°2, antideslizante."
+        },
+        {
+          "type": "table",
+          "heading": "Diseños:",
+          "headers": ["Tipo", "Ancho", "Largo"],
+          "rows": [
+            ["Recuadro", "0,60", "0,50"],
+            ["Ribeteada (doble capa)", "0,40", "0,50"],
+            ["", "0,60", "0,50"],
+            ["Piecito", "0,60", "0,50"]
+          ]
+        },
+        {
+          "type": "note",
+          "text": "* Nos ajustamos a sus medidas."
+        }
+      ],
+      "images": [
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/alfombra-de-bano-01.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/alfombra-de-bano-02.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/alfombra-de-bano-03.jpg",
+        "https://sabanasecuador.com/wp-content/uploads/2023/08/alfombra-de-bano-04.jpg"
+      ]
+    }
+  ]
+}

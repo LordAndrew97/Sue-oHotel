@@ -345,7 +345,7 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
   <div class="wrap">
     <div class="hero-inner">
       <span class="eyebrow">Soluciones textiles</span>
-      <h1>Vestimos las camas<br>donde el Ecuador descansa.</h1>
+      <h1>Damos satisfacción y confort al mercado hotelero y hogar más exigente,<br>con altos estándares de calidad.</h1>
       <span class="promesa">Su satisfacción al dormir.</span>
       <p>Damos satisfacción  y confort al mercado hotelero y hogar más exigente, con altos estándares de calidad.</p>
       <div class="hero-cta">
@@ -618,20 +618,21 @@ quoteForm.addEventListener("submit",event=>{event.preventDefault();const data=ne
 /* productos */
 const grid=$("#prod-grid"),sub=$("#sub"),fprod=$("#foot-prod");
 const allProducts=SUENOHOTEL_PRODUCTS.allProducts;
-const featuredProducts=SUENOHOTEL_PRODUCTS.featuredProductNames
-  .map(name=>allProducts.find(product=>product.n===name))
+const featuredProducts=SUENOHOTEL_PRODUCTS.featuredSlugs
+  .map(slug=>allProducts.find(product=>product.slug===slug))
   .filter(Boolean);
 const catalogProducts=allProducts;
 
 featuredProducts.forEach(p=>{
-  const a=document.createElement("a"); a.className="tile"; a.href="#contacto";
+  const a=document.createElement("a"); a.className="tile"; a.href=p.href;
+  a.setAttribute("aria-label",`Ver información de ${p.n}`);
   a.innerHTML=`<div class="img"><img loading="lazy" src="${p.img}" alt="${p.n}"></div>
-    <div class="cap"><h3>${p.n}</h3><em>Consultar</em></div>`;
+    <div class="cap"><h3>${p.n}</h3><em>Ver producto</em></div>`;
   grid.appendChild(a);
 });
 catalogProducts.forEach(p=>{
-  sub.insertAdjacentHTML("beforeend",`<li><a href="catalogo_suenohotel.html">${p.n}</a></li>`);
-  fprod.insertAdjacentHTML("beforeend",`<li><a href="catalogo_suenohotel.html">${p.n}</a></li>`);
+  sub.insertAdjacentHTML("beforeend",`<li><a href="${p.href}">${p.n}</a></li>`);
+  fprod.insertAdjacentHTML("beforeend",`<li><a href="${p.href}">${p.n}</a></li>`);
 });
 
 /* Marquee: logotipos duplicados para un desplazamiento continuo */

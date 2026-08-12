@@ -4,3 +4,6 @@ wrangler.jsonc
 .assetsignore
 .git
 .github
+content
+scripts
+templates
