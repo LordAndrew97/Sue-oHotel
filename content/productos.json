@@ -138,11 +138,10 @@
         }
       ],
       "images": [
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/duvet-01.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/duvet-02.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/duvet-03.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/duvet-04.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/duvet-05.jpg"
+        "assets/productos/duvet/duvet-01.jpg",
+        "assets/productos/duvet/duvet-03.jpg",
+        "assets/productos/duvet/duvet-04.jpg",
+        "assets/productos/duvet/duvet-05.jpg"
       ]
     },
     {
@@ -179,18 +178,18 @@
         }
       ],
       "images": [
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-01.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-02.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-03.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-04.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-05.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-06.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-07.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-08.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-09.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-10.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-11.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/fundas-duvet-12.jpg"
+        "assets/productos/fundas-de-duvet/fundas-duvet-01.jpg",
+        "assets/productos/fundas-de-duvet/fundas-duvet-02.jpg",
+        "assets/productos/fundas-de-duvet/fundas-duvet-03.jpg",
+        "assets/productos/fundas-de-duvet/fundas-duvet-04.jpg",
+        "assets/productos/fundas-de-duvet/fundas-duvet-05.jpg",
+        "assets/productos/fundas-de-duvet/fundas-duvet-06.jpg",
+        "assets/productos/fundas-de-duvet/fundas-duvet-07.jpg",
+        "assets/productos/fundas-de-duvet/fundas-duvet-08.jpg",
+        "assets/productos/fundas-de-duvet/fundas-duvet-09.jpg",
+        "assets/productos/fundas-de-duvet/fundas-duvet-10.jpg",
+        "assets/productos/fundas-de-duvet/fundas-duvet-11.jpg",
+        "assets/productos/fundas-de-duvet/fundas-duvet-12.jpg"
       ]
     },
     {
@@ -217,7 +216,7 @@
         }
       ],
       "images": [
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/edredones-01.jpg",
+        "assets/productos/edredones/edredones-01.jpg",
         "https://sabanasecuador.com/wp-content/uploads/2023/08/edredones-02.jpg",
         "https://sabanasecuador.com/wp-content/uploads/2023/08/edredones-03.jpg",
         "https://sabanasecuador.com/wp-content/uploads/2023/08/edredones-04.jpg"
