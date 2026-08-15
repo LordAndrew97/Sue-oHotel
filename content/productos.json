@@ -217,9 +217,9 @@
       ],
       "images": [
         "assets/productos/edredones/edredones-01.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/edredones-02.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/edredones-03.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/edredones-04.jpg"
+        "assets/productos/edredones/edredones-02.jpg",
+        "assets/productos/edredones/edredones-03.jpg",
+        "assets/productos/edredones/edredones-04.jpg"
       ]
     },
     {
@@ -260,12 +260,12 @@
         }
       ],
       "images": [
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-duvet-01.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-duvet-02.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-duvet-03.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-duvet-04.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-duvet-05.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-duvet-06.jpg"
+        "assets/productos/protector-de-colchon/protector-de-duvet-01.jpg",
+        "assets/productos/protector-de-colchon/protector-de-duvet-02.jpg",
+        "assets/productos/protector-de-colchon/protector-de-duvet-03.jpg",
+        "assets/productos/protector-de-colchon/protector-de-duvet-04.jpg",
+        "assets/productos/protector-de-colchon/protector-de-duvet-05.jpg",
+        "assets/productos/protector-de-colchon/protector-de-duvet-06.jpg"
       ]
     },
     {
