@@ -303,10 +303,10 @@
       ],
       "images": [
         "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-almohada-01.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-almohada-02.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-almohada-03.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-almohada-04.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-almohada-05.jpg"
+        "assets/productos/protector-de-almohada/protector-de-almohada-02.jpg",
+        "assets/productos/protector-de-almohada/protector-de-almohada-03.jpg",
+        "assets/productos/protector-de-almohada/protector-de-almohada-04.jpg",
+        "assets/productos/protector-de-almohada/protector-de-almohada-05.jpg"
       ]
     },
     {
@@ -336,12 +336,12 @@
         }
       ],
       "images": [
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/toallas-01.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/toallas-02.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/toallas-03.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/toallas-05.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/toallas-04.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/toallas-06.jpg"
+        "assets/productos/toallas/toallas-01.jpg",
+        "assets/productos/toallas/toallas-02.jpg",
+        "assets/productos/toallas/toallas-03.jpg",
+        "assets/productos/toallas/toallas-05.jpg",
+        "assets/productos/toallas/toallas-04.jpg",
+        "assets/productos/toallas/toallas-06.jpg"
       ]
     },
     {
@@ -379,10 +379,10 @@
         }
       ],
       "images": [
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/sabanas-05.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/sabanas-02.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/sabanas-03.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/sabanas-04.jpg"
+        "assets/productos/sabanas/sabanas-05.jpg",
+        "assets/productos/sabanas/sabanas-02.jpg",
+        "assets/productos/sabanas/sabanas-03.jpg",
+        "assets/productos/sabanas/sabanas-04.jpg"
       ]
     },
     {
@@ -410,10 +410,10 @@
       ],
       "images": [
         "https://magnotex.humads.workers.dev/assets/productos/salidas-de-bano/salidas-de-bano-principal.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/salidas-de-bano-01.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/salidas-de-bano-02.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/salidas-de-bano-03.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/salidas-de-bano-05.jpg"
+        "assets/productos/salidas-de-bano/salidas-de-bano-01.jpg",
+        "assets/productos/salidas-de-bano/salidas-de-bano-02.jpg",
+        "assets/productos/salidas-de-bano/salidas-de-bano-03.jpg",
+        "assets/productos/salidas-de-bano/salidas-de-bano-05.jpg"
       ]
     },
     {
@@ -432,10 +432,10 @@
         }
       ],
       "images": [
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/faldones-04.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/faldones-01.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/faldones-02.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/faldones-03.jpg"
+        "assets/productos/faldones/faldones-04.jpg",
+        "assets/productos/faldones/faldones-01.jpg",
+        "assets/productos/faldones/faldones-02.jpg",
+        "assets/productos/faldones/faldones-03.jpg"
       ]
     },
     {
@@ -474,11 +474,11 @@
         }
       ],
       "images": [
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/cobijas-termicas-06.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/cobijas-termicas-02.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/cobijas-termicas-03.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/cobijas-termicas-04.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/cobijas-termicas-05.jpg"
+        "assets/productos/cobija-termica/cobijas-termicas-06.jpg",
+        "assets/productos/cobija-termica/cobijas-termicas-02.jpg",
+        "assets/productos/cobija-termica/cobijas-termicas-03.jpg",
+        "assets/productos/cobija-termica/cobijas-termicas-04.jpg",
+        "assets/productos/cobija-termica/cobijas-termicas-05.jpg"
       ]
     },
     {
@@ -496,10 +496,10 @@
         }
       ],
       "images": [
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/manteleria-01.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/manteleria-02.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/manteleria-03.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/manteleria-04.jpg"
+        "assets/productos/manteleria/manteleria-01.jpg",
+        "assets/productos/manteleria/manteleria-02.jpg",
+        "assets/productos/manteleria/manteleria-03.jpg",
+        "assets/productos/manteleria/manteleria-04.jpg"
       ]
     },
     {
@@ -519,7 +519,6 @@
           "rows": [
             ["Recuadro", "0,60", "0,50"],
             ["Ribeteada (doble capa)", "0,40", "0,50"],
-            ["", "0,60", "0,50"],
             ["Piecito", "0,60", "0,50"]
           ]
         },
@@ -529,10 +528,9 @@
         }
       ],
       "images": [
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/alfombra-de-bano-01.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/alfombra-de-bano-02.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/alfombra-de-bano-03.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/alfombra-de-bano-04.jpg"
+        "assets/productos/alfombras-de-bano/alfombra-de-bano-01.jpg",
+        "assets/productos/alfombras-de-bano/alfombra-de-bano-02.jpg",
+        "assets/productos/alfombras-de-bano/alfombra-de-bano-03.jpg"
       ]
     }
   ]
