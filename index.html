@@ -323,8 +323,8 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
 <header id="header">
   <div class="wrap hbar">
     <a class="brand" href="#inicio">
-      <img class="light" id="logo-light" src="assets/logotipo-blanco.png" alt="SueñoHotel Proveedor Hotelero">
-      <img class="dark" id="logo-dark" src="assets/logotipo.png" alt="SueñoHotel Proveedor Hotelero">
+      <img class="light" id="logo-light" src="assets/logotipo-blanco.png" alt="SueñoHotel Proveedor Hotelero" width="1080" height="247">
+      <img class="dark" id="logo-dark" src="assets/logotipo.png" alt="SueñoHotel Proveedor Hotelero" width="1080" height="247">
     </a>
     <button class="burger" id="burger" type="button" aria-label="Menú" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
     <ul class="nav" id="nav">
@@ -387,7 +387,7 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
 <section class="about sec" id="nosotros">
   <div class="wrap about-grid">
     <div class="about-img reveal">
-      <img src="assets/suenohotel_cama_1200x737.png" alt="Productos SueñoHotel para el descanso">
+      <img src="assets/suenohotel_cama_1200x737.png" alt="Productos SueñoHotel para el descanso" width="1200" height="737">
     </div>
     <div class="reveal">
       <span class="eyebrow">SueñoHotel</span>
@@ -511,10 +511,10 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
   <div class="wrap">
     <div class="foot">
       <div>
-        <img class="flogo" id="logo-foot" src="assets/logotipo-blanco.png" alt="SueñoHotel Proveedor Hotelero">
+        <img class="flogo" id="logo-foot" src="assets/logotipo-blanco.png" alt="SueñoHotel Proveedor Hotelero" width="1080" height="247">
         <p id="foot-about"></p>
         <div class="pay"><span style="color:var(--brass);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase">Aceptamos todas las tarjetas</span>
-          <img id="tarjetas" src="assets/tarjetas-de-credito.png" alt="Tarjetas de crédito y débito"></div>
+          <img id="tarjetas" src="assets/tarjetas-de-credito.png" alt="Tarjetas de crédito y débito" width="1920" height="195"></div>
       </div>
       <div>
         <h4>Productos</h4>
@@ -624,7 +624,7 @@ const catalogProducts=allProducts;
 featuredProducts.forEach(p=>{
   const a=document.createElement("a"); a.className="tile"; a.href=p.href;
   a.setAttribute("aria-label",`Ver información de ${p.n}`);
-  a.innerHTML=`<div class="img"><img loading="lazy" src="${p.img}" alt="${p.n}"></div>
+  a.innerHTML=`<div class="img"><img loading="lazy" src="${p.img}" alt="${p.n}" width="${p.w}" height="${p.h}"></div>
     <div class="cap"><h3>${p.n}</h3><em>Ver producto</em></div>`;
   grid.appendChild(a);
 });
@@ -636,7 +636,7 @@ catalogProducts.forEach(p=>{
 /* Marquee: logotipos duplicados para un desplazamiento continuo */
 const track=$("#track");
 const logoHTML=CONFIG.clientes.map(x=>{const[m,n]=x.split("/");
-  return `<img loading="lazy" src="assets/clientes/${m}/clientes-${n}.png" alt="Hotel cliente">`;}).join("");
+  return `<img loading="lazy" src="assets/clientes/${m}/clientes-${n}.png" alt="Hotel cliente" width="150" height="125">`;}).join("");
 track.innerHTML=logoHTML+logoHTML;
 
 /* header scroll */

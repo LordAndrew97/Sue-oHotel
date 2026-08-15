@@ -15,14 +15,27 @@ try {
   foreach ($product in $data.products) {
     $productDirectory = Join-Path $destinationRoot $product.slug
     [System.IO.Directory]::CreateDirectory($productDirectory) | Out-Null
-    foreach ($imageUrl in $product.images) {
-      $fileName = [System.IO.Path]::GetFileName(([Uri]$imageUrl).AbsolutePath)
+    foreach ($imageReference in $product.images) {
+      $absoluteUri = $null
+      $isRemote = [Uri]::TryCreate($imageReference, [UriKind]::Absolute, [ref]$absoluteUri) -and $absoluteUri.Scheme -in @('http','https')
+      if (-not $isRemote) {
+        $normalized = $imageReference.Replace('/',[System.IO.Path]::DirectorySeparatorChar)
+        $localPath = [System.IO.Path]::GetFullPath((Join-Path $projectRoot $normalized))
+        if (-not $localPath.StartsWith($projectRoot + [System.IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase)) {
+          throw "Local image is outside the project: $imageReference"
+        }
+        if (-not (Test-Path -LiteralPath $localPath -PathType Leaf)) { throw "Missing local image: $localPath" }
+        $reused++
+        continue
+      }
+
+      $fileName = [System.IO.Path]::GetFileName($absoluteUri.AbsolutePath)
       $destination = Join-Path $productDirectory $fileName
       if ((Test-Path -LiteralPath $destination) -and -not $Force) {
         $reused++
         continue
       }
-      $client.DownloadFile($imageUrl, $destination)
+      $client.DownloadFile($absoluteUri, $destination)
       $downloaded++
     }
   }

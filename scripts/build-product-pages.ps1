@@ -20,9 +20,18 @@ function Encode-Html([AllowNull()][string]$value) {
   return [System.Net.WebUtility]::HtmlEncode($value)
 }
 
-function Get-LocalImagePath($product, [string]$imageUrl) {
-  $fileName = [System.IO.Path]::GetFileName(([Uri]$imageUrl).AbsolutePath)
-  return "../assets/productos/$($product.slug)/$fileName"
+function Get-LocalImagePath($product, [string]$imageReference) {
+  $absoluteUri = $null
+  if ([Uri]::TryCreate($imageReference, [UriKind]::Absolute, [ref]$absoluteUri) -and $absoluteUri.Scheme -in @('http','https')) {
+    $fileName = [System.IO.Path]::GetFileName($absoluteUri.AbsolutePath)
+    return "../assets/productos/$($product.slug)/$fileName"
+  }
+
+  $normalized = $imageReference.Replace('\','/')
+  if ($normalized.StartsWith('../')) { return $normalized }
+  if ($normalized.StartsWith('/')) { return '..' + $normalized }
+  $normalized = $normalized -replace '^\./',''
+  return '../' + $normalized
 }
 
 function Get-ImageSize([string]$relativePath) {
@@ -67,7 +76,7 @@ if ($data.products.Count -ne 14) { throw "Expected 14 products, found $($data.pr
 $generatedFiles = New-Object System.Collections.Generic.List[string]
 
 foreach ($product in $data.products) {
-  if (-not $product.slug -or -not $product.name -or -not $product.sourceUrl -or -not $product.blocks -or -not $product.images) { throw "Incomplete product data for '$($product.slug)'." }
+  if (-not $product.slug -or -not $product.name -or -not $product.blocks -or -not $product.images) { throw "Incomplete product data for '$($product.slug)'." }
   foreach ($imageUrl in $product.images) {
     $localRelative = Get-LocalImagePath $product $imageUrl
     $localAbsolute = Join-Path $projectRoot ($localRelative -replace '^\.\./','')
@@ -82,7 +91,10 @@ foreach ($product in $data.products) {
     $galleryCards = for ($index = 0; $index -lt $galleryImages.Count; $index++) {
       $localImage = Get-LocalImagePath $product $galleryImages[$index]
       $imageSize = Get-ImageSize $localImage
-      $imageAlt = Encode-Html ("{0} - imagen {1}" -f $product.name,($index + 2))
+      $localFileName = [System.IO.Path]::GetFileName($localImage)
+      $altProperty = if ($product.imageAlts) { $product.imageAlts.PSObject.Properties[$localFileName] } else { $null }
+      $imageAltText = if ($altProperty) { [string]$altProperty.Value } else { "{0} - imagen {1}" -f $product.name,($index + 2) }
+      $imageAlt = Encode-Html $imageAltText
       '<a class="gallery-card" href="' + $localImage + '" target="_blank" rel="noopener"><img loading="lazy" src="' + $localImage + '" alt="' + $imageAlt + '" width="' + $imageSize.Width + '" height="' + $imageSize.Height + '"></a>'
     }
     $gallerySection = '<section class="gallery sec" aria-labelledby="gallery-title"><div class="wrap"><div class="section-head"><div><span class="eyebrow">' + $galleryLabel + '</span><h2 id="gallery-title">' + (Encode-Html $product.name) + '</h2></div><span class="image-count">' + ([string]$product.images.Count) + ' ' + $imagesLabel + '</span></div><div class="gallery-grid">' + ($galleryCards -join '') + '</div></div></section>'
@@ -98,7 +110,8 @@ foreach ($product in $data.products) {
   $relatedIndexes = @(1,2,3 | ForEach-Object { ($productIndex + $_) % $data.products.Count })
   $relatedProducts = @($relatedIndexes | ForEach-Object {
     $related = $data.products[$_]
-    '<a class="related-card" href="' + $related.slug + '.html"><img loading="lazy" src="../' + $related.cardImage + '" alt=""><span>' + (Encode-Html $related.name) + '</span></a>'
+    $relatedSize = Get-ImageSize ('../' + $related.cardImage)
+    '<a class="related-card" href="' + $related.slug + '.html"><img loading="lazy" src="../' + $related.cardImage + '" alt="" width="' + $relatedSize.Width + '" height="' + $relatedSize.Height + '"><span>' + (Encode-Html $related.name) + '</span></a>'
   }) -join ''
 
   $firstText = $null
@@ -111,7 +124,7 @@ foreach ($product in $data.products) {
   $description = $firstText
   if ($description.Length -gt 155) { $description = $description.Substring(0,152).TrimEnd() + '...' }
   $canonical = "https://magnotex.humads.workers.dev/productos/$($product.slug)"
-  $ogFile = [System.IO.Path]::GetFileName(([Uri]$product.images[0]).AbsolutePath)
+  $ogFile = [System.IO.Path]::GetFileName((Get-LocalImagePath $product $product.images[0]))
   $ogImage = "https://magnotex.humads.workers.dev/assets/productos/$($product.slug)/$ogFile"
 
   $html = $template
@@ -137,7 +150,10 @@ foreach ($product in $data.products) {
   $generatedFiles.Add($outputPath)
 }
 
-$catalogProducts = @($data.products | ForEach-Object { [ordered]@{ n=$_.name; slug=$_.slug; img=$_.cardImage; href=("productos/" + $_.slug + ".html") } })
+$catalogProducts = @($data.products | ForEach-Object {
+  $cardSize = Get-ImageSize $_.cardImage
+  [ordered]@{ n=$_.name; slug=$_.slug; img=$_.cardImage; href=("productos/" + $_.slug + ".html"); w=$cardSize.Width; h=$cardSize.Height }
+})
 $catalogObject = [ordered]@{ allProducts=$catalogProducts; featuredSlugs=@($data.featuredSlugs) }
 $catalogJson = $catalogObject | ConvertTo-Json -Depth 8 -Compress
 [System.IO.File]::WriteAllText($catalogDataPath,"window.SUENOHOTEL_PRODUCTS=$catalogJson;`n",$utf8NoBom)

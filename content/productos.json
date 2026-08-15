@@ -9,7 +9,6 @@
     {
       "slug": "almohadas",
       "name": "Almohadas",
-      "sourceUrl": "https://sabanasecuador.com/productos/almohadas/",
       "cardImage": "assets/producto-almohadas.png",
       "blocks": [
         {
@@ -48,7 +47,6 @@
     {
       "slug": "colchas",
       "name": "Colchas",
-      "sourceUrl": "https://sabanasecuador.com/productos/colchas/",
       "cardImage": "assets/producto-colchas.jpg",
       "blocks": [
         {
@@ -63,7 +61,7 @@
         {
           "type": "list",
           "heading": "Diseños:",
-          "items": ["Flores", "Cuadros", "Lazos"]
+          "items": ["Flores", "Cuadros", "Lazos", "Zigzag"]
         },
         {
           "type": "table",
@@ -83,8 +81,8 @@
         }
       ],
       "images": [
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/colchas-02.jpg",
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/colchas-11.jpg",
+        "assets/productos/colchas/colchas-02.jpg",
+        "assets/productos/colchas/colchas-11.jpg",
         "assets/productos/colchas/colchas-01.jpg",
         "assets/productos/colchas/colchas-03.jpg",
         "assets/productos/colchas/colchas-04.jpg",
@@ -99,7 +97,6 @@
     {
       "slug": "duvet",
       "name": "Duvet",
-      "sourceUrl": "https://sabanasecuador.com/productos/duvet/",
       "cardImage": "assets/producto-duvet.jpg",
       "blocks": [
         {
@@ -147,7 +144,6 @@
     {
       "slug": "fundas-de-duvet",
       "name": "Fundas de duvet",
-      "sourceUrl": "https://sabanasecuador.com/productos/fundas-de-duvet/",
       "cardImage": "assets/producto-fundas-duvet.jpg",
       "blocks": [
         {
@@ -195,7 +191,6 @@
     {
       "slug": "edredones",
       "name": "Edredones",
-      "sourceUrl": "https://sabanasecuador.com/productos/edredones/",
       "cardImage": "assets/producto-edredones.jpg",
       "blocks": [
         {
@@ -225,7 +220,6 @@
     {
       "slug": "protector-de-colchon",
       "name": "Protector de colchón",
-      "sourceUrl": "https://sabanasecuador.com/productos/protector-de-colchon/",
       "cardImage": "assets/producto-protector-colchon.jpg",
       "blocks": [
         {
@@ -271,7 +265,6 @@
     {
       "slug": "protector-de-almohada",
       "name": "Protector de almohada",
-      "sourceUrl": "https://sabanasecuador.com/productos/protector-de-almohada/",
       "cardImage": "assets/producto-protector-almohada.jpg",
       "blocks": [
         {
@@ -302,7 +295,7 @@
         }
       ],
       "images": [
-        "https://sabanasecuador.com/wp-content/uploads/2023/08/protector-de-almohada-01.jpg",
+        "assets/productos/protector-de-almohada/protector-de-almohada-01.jpg",
         "assets/productos/protector-de-almohada/protector-de-almohada-02.jpg",
         "assets/productos/protector-de-almohada/protector-de-almohada-03.jpg",
         "assets/productos/protector-de-almohada/protector-de-almohada-04.jpg",
@@ -312,7 +305,6 @@
     {
       "slug": "toallas",
       "name": "Toallas",
-      "sourceUrl": "https://sabanasecuador.com/productos/toallas/",
       "cardImage": "assets/producto-toallas.png",
       "blocks": [
         {
@@ -347,7 +339,6 @@
     {
       "slug": "sabanas",
       "name": "Sábanas",
-      "sourceUrl": "https://sabanasecuador.com/productos/sabanas/",
       "cardImage": "assets/producto-sabanas.png",
       "blocks": [
         {
@@ -382,13 +373,16 @@
         "assets/productos/sabanas/sabanas-05.jpg",
         "assets/productos/sabanas/sabanas-02.jpg",
         "assets/productos/sabanas/sabanas-03.jpg",
-        "assets/productos/sabanas/sabanas-04.jpg"
-      ]
+        "assets/productos/sabanas/sabanas-04.jpg",
+        "assets/productos/sabanas/sabanas-06.png"
+      ],
+      "imageAlts": {
+        "sabanas-06.png": "Sábanas - satín de 3 cm, percal de 300 hilos y tejido de 144 hilos"
+      }
     },
     {
       "slug": "salidas-de-bano",
       "name": "Salidas de baño",
-      "sourceUrl": "https://sabanasecuador.com/productos/salidas-de-bano/",
       "cardImage": "assets/producto-salidas-bano.png",
       "blocks": [
         {
@@ -409,7 +403,7 @@
         }
       ],
       "images": [
-        "https://magnotex.humads.workers.dev/assets/productos/salidas-de-bano/salidas-de-bano-principal.jpg",
+        "assets/productos/salidas-de-bano/salidas-de-bano-principal.jpg",
         "assets/productos/salidas-de-bano/salidas-de-bano-01.jpg",
         "assets/productos/salidas-de-bano/salidas-de-bano-02.jpg",
         "assets/productos/salidas-de-bano/salidas-de-bano-03.jpg",
@@ -419,7 +413,6 @@
     {
       "slug": "faldones",
       "name": "Faldones",
-      "sourceUrl": "https://sabanasecuador.com/productos/faldones/",
       "cardImage": "assets/producto-faldones.jpg",
       "blocks": [
         {
@@ -441,7 +434,6 @@
     {
       "slug": "cobija-termica",
       "name": "Cobija térmica",
-      "sourceUrl": "https://sabanasecuador.com/productos/cobija-termica/",
       "cardImage": "assets/producto-cobija-termica.png",
       "blocks": [
         {
@@ -484,7 +476,6 @@
     {
       "slug": "manteleria",
       "name": "Mantelería",
-      "sourceUrl": "https://sabanasecuador.com/productos/manteleria/",
       "cardImage": "assets/producto-manteleria.jpg",
       "blocks": [
         {
@@ -499,13 +490,16 @@
         "assets/productos/manteleria/manteleria-01.jpg",
         "assets/productos/manteleria/manteleria-02.jpg",
         "assets/productos/manteleria/manteleria-03.jpg",
-        "assets/productos/manteleria/manteleria-04.jpg"
-      ]
+        "assets/productos/manteleria/manteleria-04.jpg",
+        "assets/productos/manteleria/manteleria-05.png"
+      ],
+      "imageAlts": {
+        "manteleria-05.png": "Mantelería - muestras textiles dobladas en tonos camel, gris oscuro, topo y marfil"
+      }
     },
     {
       "slug": "alfombras-de-bano",
       "name": "Alfombras de baño",
-      "sourceUrl": "https://sabanasecuador.com/productos/alfombras-de-bano/",
       "cardImage": "assets/producto-alfombra-bano.png",
       "blocks": [
         {
