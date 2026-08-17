@@ -5,6 +5,7 @@
   var ACCEPTED = 'accepted';
   var REJECTED = 'rejected';
   var scriptElement = document.currentScript;
+  var containerId = scriptElement ? scriptElement.getAttribute('data-gtm-container-id') : '';
   var measurementId = scriptElement ? scriptElement.getAttribute('data-ga-measurement-id') : '';
 
   function readConsent() {
@@ -23,15 +24,56 @@
     }
   }
 
+  function prepareConsentState() {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () {
+      window.dataLayer.push(arguments);
+    };
+
+    if (window.__suenohotelConsentPrepared) return;
+    window.__suenohotelConsentPrepared = true;
+
+    window.gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    window.gtag('consent', 'update', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'granted'
+    });
+  }
+
+  function loadTagManager() {
+    if (!/^GTM-[A-Z0-9]+$/.test(containerId)) return;
+    if (window.__suenohotelGtmContainerId === containerId) return;
+
+    window.__suenohotelGtmContainerId = containerId;
+    prepareConsentState();
+
+    var source = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(containerId);
+    var tagManagerScript = document.querySelector('script[data-suenohotel-gtm]') ||
+      document.querySelector('script[src="' + source + '"]');
+
+    if (!tagManagerScript) {
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      tagManagerScript = document.createElement('script');
+      tagManagerScript.async = true;
+      tagManagerScript.src = source;
+      tagManagerScript.setAttribute('data-suenohotel-gtm', containerId);
+      document.head.appendChild(tagManagerScript);
+    }
+  }
+
   function loadAnalytics() {
     if (!/^G-[A-Z0-9]+$/.test(measurementId)) return;
     if (window.__suenohotelGa4MeasurementId === measurementId) return;
 
     window.__suenohotelGa4MeasurementId = measurementId;
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function () {
-      window.dataLayer.push(arguments);
-    };
+    prepareConsentState();
 
     var source = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
     var analyticsScript = document.querySelector('script[data-suenohotel-ga4]') ||
@@ -47,6 +89,11 @@
 
     window.gtag('js', new Date());
     window.gtag('config', measurementId);
+  }
+
+  function loadMeasurementTools() {
+    loadTagManager();
+    loadAnalytics();
   }
 
   function closeBanner(banner) {
@@ -102,7 +149,7 @@
 
       if (button.getAttribute('data-cookie-choice') === 'accept') {
         saveConsent(ACCEPTED);
-        loadAnalytics();
+        loadMeasurementTools();
       } else {
         saveConsent(REJECTED);
       }
@@ -113,7 +160,7 @@
 
   var consent = readConsent();
   if (consent === ACCEPTED) {
-    loadAnalytics();
+    loadMeasurementTools();
   } else if (consent !== REJECTED) {
     showBanner();
   }
