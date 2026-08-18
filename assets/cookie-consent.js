@@ -5,8 +5,9 @@
   var ACCEPTED = 'accepted';
   var REJECTED = 'rejected';
   var scriptElement = document.currentScript;
-  var containerId = scriptElement ? scriptElement.getAttribute('data-gtm-container-id') : '';
   var measurementId = scriptElement ? scriptElement.getAttribute('data-ga-measurement-id') : '';
+  var privacyPolicyHref = scriptElement ? scriptElement.getAttribute('data-privacy-policy-href') : 'politica-de-privacidad.html';
+  var cookiePolicyHref = scriptElement ? scriptElement.getAttribute('data-cookie-policy-href') : 'politica-de-cookies.html';
 
   function readConsent() {
     try {
@@ -47,27 +48,6 @@
     });
   }
 
-  function loadTagManager() {
-    if (!/^GTM-[A-Z0-9]+$/.test(containerId)) return;
-    if (window.__suenohotelGtmContainerId === containerId) return;
-
-    window.__suenohotelGtmContainerId = containerId;
-    prepareConsentState();
-
-    var source = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(containerId);
-    var tagManagerScript = document.querySelector('script[data-suenohotel-gtm]') ||
-      document.querySelector('script[src="' + source + '"]');
-
-    if (!tagManagerScript) {
-      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-      tagManagerScript = document.createElement('script');
-      tagManagerScript.async = true;
-      tagManagerScript.src = source;
-      tagManagerScript.setAttribute('data-suenohotel-gtm', containerId);
-      document.head.appendChild(tagManagerScript);
-    }
-  }
-
   function loadAnalytics() {
     if (!/^G-[A-Z0-9]+$/.test(measurementId)) return;
     if (window.__suenohotelGa4MeasurementId === measurementId) return;
@@ -88,13 +68,37 @@
     }
 
     window.gtag('js', new Date());
-    window.gtag('config', measurementId);
+    window.gtag('config', measurementId, { send_page_view: true });
+    window.__suenohotelAnalyticsReady = true;
   }
 
-  function loadMeasurementTools() {
-    loadTagManager();
-    loadAnalytics();
+  function revokeAnalytics() {
+    prepareConsentState();
+    window.gtag('consent', 'update', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    window.__suenohotelAnalyticsReady = false;
+    window.__suenohotelGa4MeasurementId = null;
+
+    try {
+      document.cookie.split(';').forEach(function (cookie) {
+        var name = cookie.split('=')[0].trim();
+        if (/^_(ga|gid|gat)/.test(name)) {
+          document.cookie = name + '=; Max-Age=0; path=/';
+        }
+      });
+    } catch (error) {
+      // Consent is still denied even if the browser blocks cookie cleanup.
+    }
   }
+
+  window.suenohotelTrack = function (eventName, eventParams) {
+    if (!window.__suenohotelAnalyticsReady || typeof window.gtag !== 'function') return;
+    window.gtag('event', eventName, eventParams || {});
+  };
 
   function closeBanner(banner) {
     banner.classList.remove('is-visible');
@@ -127,7 +131,8 @@
         '<div class="cookie-consent__content">' +
           '<p class="cookie-consent__eyebrow">Tu privacidad</p>' +
           '<h2 class="cookie-consent__title" id="cookie-consent-title">Una visita a tu medida</h2>' +
-          '<p class="cookie-consent__text" id="cookie-consent-description">Usamos Google Analytics para entender c&oacute;mo se utiliza la web y mejorar tu experiencia. Solo activaremos la medici&oacute;n si la aceptas.</p>' +
+          '<p class="cookie-consent__text" id="cookie-consent-description">Usamos Google Analytics 4 para entender c&oacute;mo se utiliza la web y mejorar tu experiencia. Solo activaremos la medici&oacute;n si la aceptas.</p>' +
+          '<p class="cookie-consent__links"><a href="' + cookiePolicyHref + '">Pol&iacute;tica de cookies</a><span aria-hidden="true">&middot;</span><a href="' + privacyPolicyHref + '">Privacidad</a></p>' +
         '</div>' +
         '<div class="cookie-consent__actions">' +
           '<button class="cookie-consent__button cookie-consent__button--reject" type="button" data-cookie-choice="reject">Rechazar</button>' +
@@ -149,18 +154,25 @@
 
       if (button.getAttribute('data-cookie-choice') === 'accept') {
         saveConsent(ACCEPTED);
-        loadMeasurementTools();
+        prepareConsentState();
+        loadAnalytics();
       } else {
         saveConsent(REJECTED);
+        revokeAnalytics();
       }
 
       closeBanner(banner);
     });
   }
 
+  window.suenoHotelOpenConsent = function () {
+    if (!document.querySelector('.cookie-consent')) showBanner();
+  };
+
   var consent = readConsent();
   if (consent === ACCEPTED) {
-    loadMeasurementTools();
+    prepareConsentState();
+    loadAnalytics();
   } else if (consent !== REJECTED) {
     showBanner();
   }

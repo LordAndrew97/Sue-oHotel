@@ -5,22 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SueñoHotel Proveedor Hotelero</title>
 <meta name="description" content="Soluciones textiles de calidad para hoteles, alojamientos y hogares.">
-<link rel="canonical" href="https://magnotex.humads.workers.dev/">
+<link rel="canonical" href="https://sue-ohotel.suncoast.workers.dev/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_EC">
 <meta property="og:title" content="SueñoHotel | Proveedor hotelero">
 <meta property="og:description" content="Confort, calidad y excelentes acabados para hoteles, alojamientos y hogares.">
-<meta property="og:url" content="https://magnotex.humads.workers.dev/">
-<meta property="og:image" content="https://magnotex.humads.workers.dev/assets/suenohotel_cama_1200x737.png">
+<meta property="og:url" content="https://sue-ohotel.suncoast.workers.dev/">
+<meta property="og:image" content="https://sue-ohotel.suncoast.workers.dev/assets/suenohotel_cama_1200x737.png">
 <meta property="og:image:alt" content="Productos SueñoHotel para el descanso">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="SueñoHotel | Proveedor hotelero">
 <meta name="twitter:description" content="Confort, calidad y excelentes acabados para hoteles, alojamientos y hogares.">
-<meta name="twitter:image" content="https://magnotex.humads.workers.dev/assets/suenohotel_cama_1200x737.png">
+<meta name="twitter:image" content="https://sue-ohotel.suncoast.workers.dev/assets/suenohotel_cama_1200x737.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="manifest" href="assets/site.webmanifest">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
 <link rel="stylesheet" href="assets/cookie-consent.css">
-<script src="assets/cookie-consent.js" data-gtm-container-id="GTM-T92DZMJT" data-ga-measurement-id="G-LH7RZ5KQYS" defer></script>
+<script src="assets/cookie-consent.js" data-ga-measurement-id="G-LH7RZ5KQYS" data-privacy-policy-href="politica-de-privacidad.html" data-cookie-policy-href="politica-de-cookies.html" defer></script>
+<script src="assets/analytics-events.js" defer></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SueñoHotel",
+  "url": "https://sue-ohotel.suncoast.workers.dev/",
+  "logo": "https://sue-ohotel.suncoast.workers.dev/assets/logotipo.png",
+  "email": "magnotex_ventas@hotmail.com",
+  "telephone": "+593991570939",
+  "sameAs": [
+    "https://www.instagram.com/magnotex/",
+    "https://www.facebook.com/www.edredonesmagnotex.ec"
+  ]
+}</script>
 <style>
 :root{
   --suite:#191932;        /* navy del logotipo (superficie de marca) */
@@ -238,7 +254,7 @@ header.scrolled .burger span{background:var(--ink)}
 /* ===================== FOOTER ===================== */
 footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
 .foot{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:48px}
-.foot .flogo{height:56px;margin-bottom:20px}
+.foot .flogo{width:min(100%,230px);height:auto;aspect-ratio:1080/247;object-fit:contain;margin-bottom:20px}
 .foot p{font-size:.92rem;color:#949CBC;line-height:1.75;max-width:330px}
 .foot h4{color:#fff;font-family:inherit;font-weight:700;font-size:1rem;margin-bottom:18px}
 .flist{list-style:none;columns:2;column-gap:18px}
@@ -249,10 +265,10 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
   margin-bottom:4px}
 .fc a:hover,.fc .v{color:#DDE3F3}
 .pay{margin-top:6px}
-.pay img{height:34px;margin-top:10px;opacity:.9}
+.pay img{width:min(100%,280px);height:auto;aspect-ratio:1920/195;object-fit:contain;margin-top:10px;opacity:.9}
 .copy{border-top:1px solid var(--line-dark);margin-top:54px;padding:24px 0;
   display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:#7A82A4}
-.copy a{color:#A6AECC}.copy a:hover{color:var(--brass)}
+.copy a{color:#A6AECC}.copy a:hover{color:var(--brass)}.legal-links{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap}.legal-settings{padding:0;border:0;color:#A6AECC;background:transparent;font:inherit;font-size:inherit;cursor:pointer}.legal-settings:hover{color:var(--brass)}
 
 /* ===================== FORMULARIO DE COTIZACIÓN ===================== */
 .quote-form{margin-top:56px;padding:32px 0;border-top:1px solid var(--line-dark);display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:start}
@@ -549,6 +565,7 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
       </form>
     </div>    <div class="copy">
       <span>© <span id="year"></span> SueñoHotel · Todos los derechos reservados.</span>
+      <span class="legal-links"><a href="politica-de-privacidad.html">Privacidad</a><a href="politica-de-cookies.html">Cookies</a><button type="button" class="legal-settings" onclick="window.suenoHotelOpenConsent && window.suenoHotelOpenConsent()">Configurar privacidad</button></span>
       <a id="dev" href="https://www.humadigitalstudio.com/" target="_blank" rel="noopener"></a>
     </div>
   </div>

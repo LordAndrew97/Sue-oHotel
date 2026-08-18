@@ -98,7 +98,7 @@ header.scrolled .burger span{background:var(--ink)}
 .related-card:hover img{transform:scale(1.06)}
 footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
 .foot{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:48px}
-.foot .flogo{height:56px;margin-bottom:20px}
+.foot .flogo{width:min(100%,230px);height:auto;aspect-ratio:1080/247;object-fit:contain;margin-bottom:20px}
 .foot p{font-size:.92rem;color:#949CBC;line-height:1.75;max-width:330px}
 .foot h2{color:#fff;font-family:inherit;font-weight:700;font-size:1rem;margin-bottom:18px}
 .flist{list-style:none;columns:2;column-gap:18px}
@@ -110,7 +110,7 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
 .fc .v a{color:inherit}
 .pay{margin-top:6px}
 .pay span{color:var(--brass);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
-.pay img{height:34px;margin-top:10px;opacity:.9}
+.pay img{width:min(100%,280px);height:auto;aspect-ratio:1920/195;object-fit:contain;margin-top:10px;opacity:.9}
 .quote-form{margin-top:56px;padding:32px 0;border-top:1px solid var(--line-dark);display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:start}
 .quote-form h2{font-size:clamp(1.6rem,2.6vw,2.1rem);color:#fff;margin:12px 0}
 .quote-form p{max-width:360px}
@@ -126,6 +126,9 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
 .copy{border-top:1px solid var(--line-dark);margin-top:36px;padding:24px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:#7A82A4}
 .copy a{color:#A6AECC}
 .copy a:hover{color:var(--brass)}
+.legal-links{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap}
+.legal-settings{padding:0;border:0;color:#A6AECC;background:transparent;font:inherit;font-size:inherit;cursor:pointer}
+.legal-settings:hover{color:var(--brass)}
 .wa{position:fixed;right:24px;bottom:24px;z-index:80;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.4);transition:.25s}
 .wa:hover{transform:scale(1.08)}
 .wa svg{width:30px;height:30px;fill:#fff}

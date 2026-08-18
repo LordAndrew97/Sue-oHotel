@@ -123,9 +123,19 @@ foreach ($product in $data.products) {
   if (-not $firstText) { $firstText = $product.name }
   $description = $firstText
   if ($description.Length -gt 155) { $description = $description.Substring(0,152).TrimEnd() + '...' }
-  $canonical = "https://magnotex.humads.workers.dev/productos/$($product.slug)"
+  $canonical = "https://sue-ohotel.suncoast.workers.dev/productos/$($product.slug)"
   $ogFile = [System.IO.Path]::GetFileName((Get-LocalImagePath $product $product.images[0]))
-  $ogImage = "https://magnotex.humads.workers.dev/assets/productos/$($product.slug)/$ogFile"
+  $ogImage = "https://sue-ohotel.suncoast.workers.dev/assets/productos/$($product.slug)/$ogFile"
+  $productSchema = [ordered]@{
+    '@context' = 'https://schema.org'
+    '@type' = 'Product'
+    name = $product.name
+    description = $description
+    image = @("https://sue-ohotel.suncoast.workers.dev/assets/productos/$($product.slug)/$ogFile")
+    brand = [ordered]@{ '@type' = 'Brand'; name = $brandName }
+    url = $canonical
+  }
+  $structuredData = ($productSchema | ConvertTo-Json -Depth 8 -Compress)
 
   $html = $template
   $replacements = [ordered]@{
@@ -133,6 +143,7 @@ foreach ($product in $data.products) {
     '{{DESCRIPTION}}' = (Encode-Html $description)
     '{{CANONICAL}}' = (Encode-Html $canonical)
     '{{OG_IMAGE}}' = (Encode-Html $ogImage)
+    '{{STRUCTURED_DATA}}' = $structuredData
     '{{PRODUCT_NAME}}' = (Encode-Html $product.name)
     '{{HEADER_PRODUCTS}}' = $headerProducts
     '{{FOOTER_PRODUCTS}}' = $footerProducts

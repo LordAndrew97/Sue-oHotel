@@ -85,6 +85,20 @@
   line-height: 1.55;
 }
 
+.cookie-consent__links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 0;
+  font-size: .78rem;
+}
+
+.cookie-consent__links a {
+  color: var(--brass-d, #00767c);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .cookie-consent__actions {
   display: grid;
   grid-column: 1 / -1;
