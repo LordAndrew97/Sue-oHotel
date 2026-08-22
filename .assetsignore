@@ -8,3 +8,5 @@ content
 scripts
 templates
 .deploy-*
+.codex-tools
+.gitignore

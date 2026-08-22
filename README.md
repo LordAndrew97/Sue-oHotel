@@ -38,7 +38,7 @@ Puedes abrir `index.html` directamente o utilizar la vista previa integrada de V
 
 El proyecto está publicado en GitHub en:
 
-https://github.com/LordAndrew97/SuenoHotel
+https://github.com/LordAndrew97/Sue-oHotel
 
 ## Estado
 

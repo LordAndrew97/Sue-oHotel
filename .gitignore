@@ -1,0 +1,20 @@
+# Local development and deployment artifacts
+node_modules/
+.wrangler/
+.deploy-*/
+.codex-tools/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+.dev.vars
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Operating-system/editor files
+.DS_Store
+Thumbs.db
+*.swp
