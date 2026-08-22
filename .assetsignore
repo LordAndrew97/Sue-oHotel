@@ -9,4 +9,5 @@ scripts
 templates
 .deploy-*
 .codex-tools
+.wrangler
 .gitignore
