@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sue-ohotel.suncoast.workers.dev/sitemap.xml
+Sitemap: https://www.sabanasecuador.com/sitemap.xml

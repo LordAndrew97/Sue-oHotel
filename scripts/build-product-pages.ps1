@@ -123,15 +123,15 @@ foreach ($product in $data.products) {
   if (-not $firstText) { $firstText = $product.name }
   $description = $firstText
   if ($description.Length -gt 155) { $description = $description.Substring(0,152).TrimEnd() + '...' }
-  $canonical = "https://sue-ohotel.suncoast.workers.dev/productos/$($product.slug)"
+$canonical = "https://www.sabanasecuador.com/productos/$($product.slug)"
   $ogFile = [System.IO.Path]::GetFileName((Get-LocalImagePath $product $product.images[0]))
-  $ogImage = "https://sue-ohotel.suncoast.workers.dev/assets/productos/$($product.slug)/$ogFile"
+  $ogImage = "https://www.sabanasecuador.com/assets/productos/$($product.slug)/$ogFile"
   $productSchema = [ordered]@{
     '@context' = 'https://schema.org'
     '@type' = 'Product'
     name = $product.name
     description = $description
-    image = @("https://sue-ohotel.suncoast.workers.dev/assets/productos/$($product.slug)/$ogFile")
+    image = @("https://www.sabanasecuador.com/assets/productos/$($product.slug)/$ogFile")
     brand = [ordered]@{ '@type' = 'Brand'; name = $brandName }
     url = $canonical
   }
