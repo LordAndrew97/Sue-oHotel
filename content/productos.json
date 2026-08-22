@@ -513,7 +513,9 @@
           "rows": [
             ["Recuadro", "0,60", "0,50"],
             ["Ribeteada (doble capa)", "0,40", "0,50"],
-            ["Piecito", "0,60", "0,50"]
+            ["Piecito", "0,60", "0,50"],
+            ["Greca", "0,60", "0,50"],
+            ["Trenzado", "0,60", "0,50"]
           ]
         },
         {
@@ -524,7 +526,9 @@
       "images": [
         "assets/productos/alfombras-de-bano/alfombra-de-bano-01.jpg",
         "assets/productos/alfombras-de-bano/alfombra-de-bano-02.jpg",
-        "assets/productos/alfombras-de-bano/alfombra-de-bano-03.jpg"
+        "assets/productos/alfombras-de-bano/alfombra-de-bano-03.jpg",
+        "assets/productos/alfombras-de-bano/alfombra-de-bano-04.jpg",
+        "assets/productos/alfombras-de-bano/alfombra-de-bano-05.jpg"
       ]
     }
   ]
