@@ -130,8 +130,8 @@
         '</div>' +
         '<div class="cookie-consent__content">' +
           '<p class="cookie-consent__eyebrow">Tu privacidad</p>' +
-          '<h2 class="cookie-consent__title" id="cookie-consent-title">Una visita a tu medida</h2>' +
-          '<p class="cookie-consent__text" id="cookie-consent-description">Usamos Google Analytics 4 para entender c&oacute;mo se utiliza la web y mejorar tu experiencia. Solo activaremos la medici&oacute;n si la aceptas.</p>' +
+          '<h2 class="cookie-consent__title" id="cookie-consent-title">&iquest;Nos ayudas a mejorar?</h2>' +
+          '<p class="cookie-consent__text" id="cookie-consent-description">Nos gustar&iacute;a conocer qu&eacute; contenidos resultan m&aacute;s &uacute;tiles para seguir mejorando esta web. T&uacute; decides si quieres permitir esta medici&oacute;n.</p>' +
           '<p class="cookie-consent__links"><a href="' + cookiePolicyHref + '">Pol&iacute;tica de cookies</a><span aria-hidden="true">&middot;</span><a href="' + privacyPolicyHref + '">Privacidad</a></p>' +
         '</div>' +
         '<div class="cookie-consent__actions">' +
