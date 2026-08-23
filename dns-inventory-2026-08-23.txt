@@ -1,0 +1,64 @@
+Inventario DNS seguro — sabanasecuador.com
+Fecha de inspección: 2026-08-23 (Europe/Madrid)
+
+Autoridad DNS
+- Nameservers públicos: val.ns.cloudflare.com, sam.ns.cloudflare.com
+- DNS autoritativo actual: Cloudflare
+- Registrador indicado por el propietario: GoDaddy (no se ha cambiado el registrador)
+- Zona Cloudflare inspeccionada: sabanasecuador.com
+- Registros mostrados por Cloudflare: 27 de 200
+
+Web y publicación
+- AAAA @ -> 100:: (proxy Cloudflare activo; servicio web/Worker)
+- CNAME www -> sabanasecuador.com (proxy Cloudflare activo)
+- La web pública https://www.sabanasecuador.com/ estaba accesible durante la inspección.
+
+Correo cPanel actualmente existente
+- MX @, prioridad 0 -> mail.sabanasecuador.com
+- A autoconfig, autodiscover, cpanel, cpcalendars, cpcontacts, ftp, mail, webdisk, webmail y whm -> 162.55.98.227
+- A localhost -> 127.0.0.1 (solo DNS)
+- SRV _autodiscover._tcp -> 0 443 cpanelemaildiscovery.cpanel.net
+- SRV _caldavs._tcp -> 0 2080 sabanasecuador.com
+- SRV _caldav._tcp -> 0 2079 sabanasecuador.com
+- SRV _carddav._tcp -> 0 2079 sabanasecuador.com
+- TXT _caldavs._tcp, _caldav._tcp, _carddavs._tcp y _carddav._tcp -> path=/
+
+Autenticación y verificación existente
+- TXT @ SPF actual: v=spf1 ip4:162.55.98.227 +a +mx +ip4:116.202.227.29 +ip4:136.243.58.86 +ip4:142.0.33.201 ~all
+- TXT @ google-site-verification: presente; valor omitido por seguridad, no se modificará
+- TXT default._domainkey: DKIM cPanel presente; valor omitido por seguridad, no se modificará
+- TXT _acme-challenge y _cpanel-dcv-test-record: presentes; valores omitidos por seguridad, no se modifican
+- DMARC: no aparece registro _dmarc.sabanasecuador.com en la inspección pública ni en la zona visible de Cloudflare
+
+Cloudflare Email Routing antes del cambio
+- Estado: Desactivado
+- Registros DNS del servicio: No configurado
+- Direcciones de destino: 0
+- Reglas de enrutamiento: 0
+- Catch-all: no configurado
+
+Registros que Cloudflare propone para Email Routing
+- MX @ -> route1.mx.cloudflare.net (prioridad 62)
+- MX @ -> route2.mx.cloudflare.net (prioridad 50)
+- MX @ -> route3.mx.cloudflare.net (prioridad 5)
+- TXT @ SPF: v=spf1 include:_spf.mx.cloudflare.net ~all
+- TXT cf2024-1._domainkey DKIM: clave generada por Cloudflare; no se copia aquí
+
+Plan de cambio y reversión
+- Mantener sin cambios los registros web, subdominios cPanel, SRV, Google verification y DKIM default.
+- Para activar Email Routing hay que sustituir el MX cPanel por los tres MX de Cloudflare.
+- El SPF debe quedar como un único TXT SPF combinado, conservando las IP/mecanismos existentes y añadiendo include:_spf.mx.cloudflare.net.
+- El DKIM default existente y el DKIM cf2024-1 de Cloudflare usan selectores distintos y no deben fusionarse.
+- Reversión: desactivar Email Routing desde Cloudflare, restaurar MX @ -> mail.sabanasecuador.com prioridad 0 y restaurar el SPF actual exacto si Cloudflare no lo conserva automáticamente.
+- No se ha realizado todavía ningún cambio DNS ni se ha contratado ningún servicio.
+
+Cambios aplicados posteriormente
+- Destino Cloudflare añadido y mostrado como Verificado: magnotex_ventas@hotmail.com
+- MX existente editado a route1.mx.cloudflare.net, prioridad 62
+- MX añadidos: route2.mx.cloudflare.net, prioridad 50; route3.mx.cloudflare.net, prioridad 5
+- SPF único actualizado conservando el SPF cPanel y añadiendo include:_spf.mx.cloudflare.net
+- DKIM añadido: selector cf2024-1._domainkey; valor omitido por seguridad
+- DMARC añadido en modo monitorización: _dmarc -> v=DMARC1; p=none
+- Email Routing confirmado como Activado y sus registros como Bloqueado/gestionados por Cloudflare
+- Regla activa exclusiva: ventas@sabanasecuador.com -> magnotex_ventas@hotmail.com
+- Catch-all: Desactivado
