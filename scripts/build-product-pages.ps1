@@ -95,7 +95,7 @@ foreach ($product in $data.products) {
       $altProperty = if ($product.imageAlts) { $product.imageAlts.PSObject.Properties[$localFileName] } else { $null }
       $imageAltText = if ($altProperty) { [string]$altProperty.Value } else { "{0} - imagen {1}" -f $product.name,($index + 2) }
       $imageAlt = Encode-Html $imageAltText
-      '<a class="gallery-card" href="' + $localImage + '" target="_blank" rel="noopener"><img loading="lazy" src="' + $localImage + '" alt="' + $imageAlt + '" width="' + $imageSize.Width + '" height="' + $imageSize.Height + '"></a>'
+      '<a class="gallery-card" href="' + $localImage + '" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="' + $localImage + '" alt="' + $imageAlt + '" width="' + $imageSize.Width + '" height="' + $imageSize.Height + '"></a>'
     }
     $gallerySection = '<section class="gallery sec" aria-labelledby="gallery-title"><div class="wrap"><div class="section-head"><div><span class="eyebrow">' + $galleryLabel + '</span><h2 id="gallery-title">' + (Encode-Html $product.name) + '</h2></div><span class="image-count">' + ([string]$product.images.Count) + ' ' + $imagesLabel + '</span></div><div class="gallery-grid">' + ($galleryCards -join '') + '</div></div></section>'
   }
@@ -111,7 +111,7 @@ foreach ($product in $data.products) {
   $relatedProducts = @($relatedIndexes | ForEach-Object {
     $related = $data.products[$_]
     $relatedSize = Get-ImageSize ('../' + $related.cardImage)
-    '<a class="related-card" href="' + $related.slug + '.html"><img loading="lazy" src="../' + $related.cardImage + '" alt="" width="' + $relatedSize.Width + '" height="' + $relatedSize.Height + '"><span>' + (Encode-Html $related.name) + '</span></a>'
+    '<a class="related-card" href="' + $related.slug + '.html"><img loading="lazy" decoding="async" src="../' + $related.cardImage + '" alt="" width="' + $relatedSize.Width + '" height="' + $relatedSize.Height + '"><span>' + (Encode-Html $related.name) + '</span></a>'
   }) -join ''
 
   $firstText = $null

@@ -21,7 +21,8 @@
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
   <link rel="manifest" href="../assets/site.webmanifest">
   <link rel="stylesheet" href="../assets/producto-detalle.css">
-  <link rel="stylesheet" href="../assets/cookie-consent.css">
+  <link rel="preload" href="../assets/cookie-consent.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../assets/cookie-consent.css"></noscript>
   <script src="../assets/cookie-consent.js" data-ga-measurement-id="G-LH7RZ5KQYS" data-privacy-policy-href="../politica-de-privacidad.html" data-cookie-policy-href="../politica-de-cookies.html" defer></script>
   <script type="application/ld+json">{{STRUCTURED_DATA}}</script>
   <script src="../assets/analytics-events.js" defer></script>
@@ -61,7 +62,7 @@
     <section class="product-main sec">
       <div class="wrap product-layout">
         <figure class="product-lead-image">
-          <img src="{{HERO_IMAGE}}" alt="{{PRODUCT_NAME}}" width="{{HERO_WIDTH}}" height="{{HERO_HEIGHT}}">
+          <img decoding="async" src="{{HERO_IMAGE}}" alt="{{PRODUCT_NAME}}" width="{{HERO_WIDTH}}" height="{{HERO_HEIGHT}}">
         </figure>
         <article class="product-specs" aria-labelledby="specs-title">
           <span class="eyebrow">Información del producto</span>
@@ -94,7 +95,7 @@
         <div>
           <img class="flogo" src="../assets/logotipo-blanco.png" alt="SueñoHotel Proveedor Hotelero" width="1080" height="247">
           <p>Soluciones textiles con experiencia, calidad y fabricación especializada.</p>
-          <div class="pay"><span>Aceptamos todas las tarjetas</span><img src="../assets/tarjetas-de-credito.png" alt="Tarjetas de crédito y débito" width="1920" height="195"></div>
+          <div class="pay"><span>Aceptamos todas las tarjetas</span><img loading="lazy" decoding="async" src="../assets/tarjetas-de-credito.png" alt="Tarjetas de crédito y débito" width="1920" height="195"></div>
         </div>
         <div><h2>Productos</h2><ul class="flist">{{FOOTER_PRODUCTS}}</ul></div>
         <div class="fc">

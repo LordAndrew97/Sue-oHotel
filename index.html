@@ -21,7 +21,8 @@
 <link rel="manifest" href="assets/site.webmanifest">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
-<link rel="stylesheet" href="assets/cookie-consent.css">
+<link rel="preload" href="assets/cookie-consent.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="assets/cookie-consent.css"></noscript>
 <script src="assets/cookie-consent.js" data-ga-measurement-id="G-LH7RZ5KQYS" data-privacy-policy-href="politica-de-privacidad.html" data-cookie-policy-href="politica-de-cookies.html" defer></script>
 <script src="assets/analytics-events.js" defer></script>
 <script type="application/ld+json">{
@@ -127,7 +128,7 @@ header.scrolled .burger span{background:var(--ink)}
 .hero{position:relative;min-height:100vh;display:flex;align-items:stretch;
   padding:104px 0 44px;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:url('assets/portada-hotel.jpg') center/cover no-repeat;
-  transform:scale(1.08);animation:slowzoom 18s ease-in-out infinite alternate;z-index:-2}
+  transform:scale(1.08);will-change:transform;animation:slowzoom 18s ease-in-out infinite alternate;z-index:-2}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;
   background:linear-gradient(105deg,rgba(16,16,42,.80) 0%,rgba(25,25,50,.62) 48%,rgba(25,25,50,.28) 100%)}
 @keyframes slowzoom{to{transform:scale(1)}}
@@ -155,7 +156,7 @@ header.scrolled .burger span{background:var(--ink)}
 .trust .lead{text-align:center;margin-bottom:42px}
 .marquee{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
   mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.track{display:flex;align-items:center;gap:54px;width:max-content;animation:scroll 95s linear infinite}
+.track{display:flex;align-items:center;gap:54px;width:max-content;will-change:transform;animation:scroll 95s linear infinite}
 .marquee:hover .track{animation-play-state:paused}
 @keyframes scroll{to{transform:translateX(-50%)}}
 .track img{height:50px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.55;transition:.3s}
@@ -228,10 +229,10 @@ header.scrolled .burger span{background:var(--ink)}
 .solution-tile .solution-label{font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:auto}
 .solution-tile h3{font-size:clamp(1.3rem,2vw,1.8rem);line-height:1.1;margin:0 0 9px;font-weight:400}
 .solution-tile p{font-size:.94rem;line-height:1.6;margin:0;max-width:34ch}
-.solution-tile--boutique{color:#fff;background:url("assets/solucion-boutique.png") center/cover}
-.solution-tile--hostales{color:#fff;background:url("assets/solucion-hostales.png") center/cover}
-.solution-tile--resorts{color:#fff;background:url("assets/solucion-resorts.png") center/cover}
-.solution-tile--apartamentos{color:#fff;background:url("assets/solucion-apartamentos.png") center/cover}
+.solution-tile--boutique{color:#fff;background:url("assets/optimized/solucion-boutique.jpg") center/cover}
+.solution-tile--hostales{color:#fff;background:url("assets/optimized/solucion-hostales.jpg") center/cover}
+.solution-tile--resorts{color:#fff;background:url("assets/optimized/solucion-resorts.jpg") center/cover}
+.solution-tile--apartamentos{color:#fff;background:url("assets/optimized/solucion-apartamentos.jpg") center/cover}
 
 
 /* ===================== MAPA ===================== */
@@ -252,11 +253,11 @@ header.scrolled .burger span{background:var(--ink)}
 .cta-phones a{color:#fff;font-weight:700}
 
 /* ===================== FOOTER ===================== */
-footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
+footer{background:#10102A;color:#C1CBE2;padding:78px 0 0}
 .foot{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:48px}
 .foot .flogo{width:min(100%,230px);height:auto;aspect-ratio:1080/247;object-fit:contain;margin-bottom:20px}
-.foot p{font-size:.92rem;color:#949CBC;line-height:1.75;max-width:330px}
-.foot h4{color:#fff;font-family:inherit;font-weight:700;font-size:1rem;margin-bottom:18px}
+.foot p{font-size:.92rem;color:#B5BED4;line-height:1.75;max-width:330px}
+.foot h3{color:#fff;font-family:inherit;font-weight:700;font-size:1rem;margin-bottom:18px}
 .flist{list-style:none;columns:2;column-gap:18px}
 .flist li{margin-bottom:9px;font-size:.9rem}
 .flist a:hover{color:var(--brass)}
@@ -268,11 +269,11 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
 .pay img{width:min(100%,280px);height:auto;aspect-ratio:1920/195;object-fit:contain;margin-top:10px;opacity:.9}
 .copy{border-top:1px solid var(--line-dark);margin-top:54px;padding:24px 0;
   display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:#7A82A4}
-.copy a{color:#A6AECC}.copy a:hover{color:var(--brass)}.legal-links{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap}.legal-settings{padding:0;border:0;color:#A6AECC;background:transparent;font:inherit;font-size:inherit;cursor:pointer}.legal-settings:hover{color:var(--brass)}
+.copy a{color:#B9C3DA}.copy a:hover{color:var(--brass)}.legal-links{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap}.legal-settings{padding:0;border:0;color:#B9C3DA;background:transparent;font:inherit;font-size:inherit;cursor:pointer}.legal-settings:hover{color:var(--brass)}
 
 /* ===================== FORMULARIO DE COTIZACIÓN ===================== */
 .quote-form{margin-top:56px;padding:32px 0;border-top:1px solid var(--line-dark);display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:start}
-.quote-form h2{font-size:clamp(1.6rem,2.6vw,2.1rem);color:#fff;margin:12px 0}.quote-form p{max-width:360px}
+.quote-form h2{font-size:clamp(1.6rem,2.6vw,2.1rem);color:#fff;margin:12px 0}.quote-form .eyebrow{color:var(--brass)}.quote-form p{max-width:360px}
 .quote-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.quote-field{display:grid;gap:6px}.quote-field--full{grid-column:1/-1}
 .quote-field label{font-size:.73rem;color:var(--brass);font-weight:800;letter-spacing:.12em;text-transform:uppercase}.quote-field label span{text-transform:none;letter-spacing:0;font-weight:500;color:#B2BAD6}
 .quote-field input,.quote-field textarea{width:100%;border:1px solid rgba(255,255,255,.22);border-radius:2px;background:rgba(255,255,255,.06);color:#fff;font:inherit;padding:11px 12px}.quote-field textarea{min-height:86px;resize:vertical}.quote-field input::placeholder,.quote-field textarea::placeholder{color:#B2BAD6}
@@ -405,7 +406,7 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
 <section class="about sec" id="nosotros">
   <div class="wrap about-grid">
     <div class="about-img reveal">
-      <img src="assets/suenohotel_cama_1200x737.png" alt="Productos SueñoHotel para el descanso" width="1200" height="737">
+      <img loading="lazy" decoding="async" src="assets/optimized/suenohotel-cama.jpg" alt="Productos SueñoHotel para el descanso" width="1000" height="614">
     </div>
     <div class="reveal">
       <span class="eyebrow">SueñoHotel</span>
@@ -532,14 +533,14 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
         <img class="flogo" id="logo-foot" src="assets/logotipo-blanco.png" alt="SueñoHotel Proveedor Hotelero" width="1080" height="247">
         <p id="foot-about"></p>
         <div class="pay"><span style="color:var(--brass);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase">Aceptamos todas las tarjetas</span>
-          <img id="tarjetas" src="assets/tarjetas-de-credito.png" alt="Tarjetas de crédito y débito" width="1920" height="195"></div>
+          <img id="tarjetas" loading="lazy" decoding="async" src="assets/tarjetas-de-credito.png" alt="Tarjetas de crédito y débito" width="1920" height="195"></div>
       </div>
       <div>
-        <h4>Productos</h4>
+        <h3>Productos</h3>
         <ul class="flist" id="foot-prod"></ul>
       </div>
       <div class="fc">
-        <h4>Contáctanos</h4>
+        <h3>Contáctanos</h3>
         <div><span>Oficina</span><a id="f-of" href="tel:023805794">(02) 3805 794</a></div>
         <div><span>Celulares</span><span class="v" id="f-cel"></span></div>
         <div><span>Correo</span><a id="f-mail" href="mailto:ventas@sabanasecuador.com">ventas@sabanasecuador.com</a></div>
@@ -643,7 +644,7 @@ const catalogProducts=allProducts;
 featuredProducts.forEach(p=>{
   const a=document.createElement("a"); a.className="tile"; a.href=p.href;
   a.setAttribute("aria-label",`Ver información de ${p.n}`);
-  a.innerHTML=`<div class="img"><img loading="lazy" src="${p.img}" alt="${p.n}" width="${p.w}" height="${p.h}"></div>
+  a.innerHTML=`<div class="img"><img loading="lazy" decoding="async" src="${p.img}" alt="${p.n}" width="${p.w}" height="${p.h}"></div>
     <div class="cap"><h3>${p.n}</h3><em>Ver producto</em></div>`;
   grid.appendChild(a);
 });
@@ -655,7 +656,7 @@ catalogProducts.forEach(p=>{
 /* Marquee: logotipos duplicados para un desplazamiento continuo */
 const track=$("#track");
 const logoHTML=CONFIG.clientes.map(x=>{const[m,n]=x.split("/");
-  return `<img loading="lazy" src="assets/clientes/${m}/clientes-${n}.png" alt="Hotel cliente" width="150" height="125">`;}).join("");
+  return `<img loading="lazy" decoding="async" src="assets/clientes/${m}/clientes-${n}.png" alt="Hotel cliente" width="150" height="125">`;}).join("");
 track.innerHTML=logoHTML+logoHTML;
 
 /* header scroll */

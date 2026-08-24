@@ -96,10 +96,10 @@ header.scrolled .burger span{background:var(--ink)}
 .related-card::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 25%,rgba(16,16,42,.94))}
 .related-card span{position:absolute;left:22px;right:22px;bottom:20px;z-index:1;color:#fff;font-family:Georgia,serif;font-size:1.35rem}
 .related-card:hover img{transform:scale(1.06)}
-footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
+footer{background:#10102A;color:#C1CBE2;padding:78px 0 0}
 .foot{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:48px}
 .foot .flogo{width:min(100%,230px);height:auto;aspect-ratio:1080/247;object-fit:contain;margin-bottom:20px}
-.foot p{font-size:.92rem;color:#949CBC;line-height:1.75;max-width:330px}
+.foot p{font-size:.92rem;color:#B5BED4;line-height:1.75;max-width:330px}
 .foot h2{color:#fff;font-family:inherit;font-weight:700;font-size:1rem;margin-bottom:18px}
 .flist{list-style:none;columns:2;column-gap:18px}
 .flist li{margin-bottom:9px;font-size:.9rem;break-inside:avoid}
@@ -112,7 +112,7 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
 .pay span{color:var(--brass);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
 .pay img{width:min(100%,280px);height:auto;aspect-ratio:1920/195;object-fit:contain;margin-top:10px;opacity:.9}
 .quote-form{margin-top:56px;padding:32px 0;border-top:1px solid var(--line-dark);display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:start}
-.quote-form h2{font-size:clamp(1.6rem,2.6vw,2.1rem);color:#fff;margin:12px 0}
+.quote-form h2{font-size:clamp(1.6rem,2.6vw,2.1rem);color:#fff;margin:12px 0}.quote-form .eyebrow{color:var(--brass)}
 .quote-form p{max-width:360px}
 .quote-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .quote-field{display:grid;gap:6px}
@@ -122,12 +122,12 @@ footer{background:#10102A;color:#A6AECC;padding:78px 0 0}
 .quote-field input,.quote-field textarea{width:100%;border:1px solid rgba(255,255,255,.22);border-radius:2px;background:rgba(255,255,255,.06);color:#fff;padding:11px 12px}
 .quote-field textarea{min-height:86px;resize:vertical}
 .quote-fields .btn{width:max-content}
-.quote-note{grid-column:1/-1;max-width:none!important;font-size:.8rem;color:#949CBC}
-.copy{border-top:1px solid var(--line-dark);margin-top:36px;padding:24px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:#7A82A4}
-.copy a{color:#A6AECC}
+.quote-note{grid-column:1/-1;max-width:none!important;font-size:.8rem;color:#B5BED4}
+.copy{border-top:1px solid var(--line-dark);margin-top:36px;padding:24px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:#ABB5D0}
+.copy a{color:#B9C3DA}
 .copy a:hover{color:var(--brass)}
 .legal-links{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap}
-.legal-settings{padding:0;border:0;color:#A6AECC;background:transparent;font:inherit;font-size:inherit;cursor:pointer}
+.legal-settings{padding:0;border:0;color:#B9C3DA;background:transparent;font:inherit;font-size:inherit;cursor:pointer}
 .legal-settings:hover{color:var(--brass)}
 .wa{position:fixed;right:24px;bottom:24px;z-index:80;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.4);transition:.25s}
 .wa:hover{transform:scale(1.08)}

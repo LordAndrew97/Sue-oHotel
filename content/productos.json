@@ -9,7 +9,7 @@
     {
       "slug": "almohadas",
       "name": "Almohadas",
-      "cardImage": "assets/producto-almohadas.png",
+      "cardImage": "assets/optimized/producto-almohadas.jpg",
       "blocks": [
         {
           "type": "section",
@@ -304,7 +304,7 @@
     {
       "slug": "toallas",
       "name": "Toallas",
-      "cardImage": "assets/producto-toallas.png",
+      "cardImage": "assets/optimized/producto-toallas.jpg",
       "blocks": [
         {
           "type": "paragraph",
@@ -338,7 +338,7 @@
     {
       "slug": "sabanas",
       "name": "Sábanas",
-      "cardImage": "assets/producto-sabanas.png",
+      "cardImage": "assets/optimized/producto-sabanas.jpg",
       "blocks": [
         {
           "type": "list",
@@ -382,7 +382,7 @@
     {
       "slug": "salidas-de-bano",
       "name": "Salidas de baño",
-      "cardImage": "assets/producto-salidas-bano.png",
+      "cardImage": "assets/optimized/producto-salidas-bano.jpg",
       "blocks": [
         {
           "type": "paragraph",
@@ -433,7 +433,7 @@
     {
       "slug": "cobija-termica",
       "name": "Cobija térmica",
-      "cardImage": "assets/producto-cobija-termica.png",
+      "cardImage": "assets/optimized/producto-cobija-termica.jpg",
       "blocks": [
         {
           "type": "section",
@@ -499,7 +499,7 @@
     {
       "slug": "alfombras-de-bano",
       "name": "Alfombras de baño",
-      "cardImage": "assets/producto-alfombra-bano.png",
+      "cardImage": "assets/optimized/producto-alfombra-bano.jpg",
       "blocks": [
         {
           "type": "paragraph",
