@@ -128,11 +128,10 @@ $canonical = "https://www.sabanasecuador.com/productos/$($product.slug)"
   $ogImage = "https://www.sabanasecuador.com/assets/productos/$($product.slug)/$ogFile"
   $productSchema = [ordered]@{
     '@context' = 'https://schema.org'
-    '@type' = 'Product'
+    '@type' = 'CollectionPage'
     name = $product.name
     description = $description
     image = @("https://www.sabanasecuador.com/assets/productos/$($product.slug)/$ogFile")
-    brand = [ordered]@{ '@type' = 'Brand'; name = $brandName }
     url = $canonical
   }
   $structuredData = ($productSchema | ConvertTo-Json -Depth 8 -Compress)
