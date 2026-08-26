@@ -9,6 +9,7 @@ node_modules/
 .env.*
 !.env.example
 .dev.vars
+dns-snapshot-*.txt
 *.pem
 *.key
 *.p12

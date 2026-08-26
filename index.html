@@ -341,9 +341,9 @@ footer{background:#10102A;color:#C1CBE2;padding:78px 0 0}
 <!-- ===================== HEADER ===================== -->
 <header id="header">
   <div class="wrap hbar">
-    <a class="brand" href="#inicio">
+    <a class="brand" href="#inicio" aria-label="SueñoHotel — volver al inicio">
       <img class="light" id="logo-light" src="assets/logotipo-blanco.png" alt="SueñoHotel Proveedor Hotelero" width="1080" height="247">
-      <img class="dark" id="logo-dark" src="assets/logotipo.png" alt="SueñoHotel Proveedor Hotelero" width="1080" height="247">
+      <img class="dark" id="logo-dark" src="assets/logotipo.png" alt="" aria-hidden="true" width="1080" height="247">
     </a>
     <button class="burger" id="burger" type="button" aria-label="Menú" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
     <ul class="nav" id="nav">
@@ -656,7 +656,7 @@ catalogProducts.forEach(p=>{
 /* Marquee: logotipos duplicados para un desplazamiento continuo */
 const track=$("#track");
 const logoHTML=CONFIG.clientes.map(x=>{const[m,n]=x.split("/");
-  return `<img loading="lazy" decoding="async" src="assets/clientes/${m}/clientes-${n}.png" alt="Hotel cliente" width="150" height="125">`;}).join("");
+  return `<img loading="lazy" decoding="async" src="assets/clientes/${m}/clientes-${n}.png" alt="" aria-hidden="true" width="150" height="125">`;}).join("");
 track.innerHTML=logoHTML+logoHTML;
 
 /* header scroll */

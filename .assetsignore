@@ -1,5 +1,6 @@
 ﻿README.md
 *.py
+dns-*.txt
 wrangler.jsonc
 .assetsignore
 .git
